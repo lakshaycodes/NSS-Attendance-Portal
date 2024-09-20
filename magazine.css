@@ -22,7 +22,7 @@
 }
 
 .card:hover {
-    background-color: #5168d0; /* Change background on hover */
+    background-color: #19366b; /* Change background on hover */
     color: white; /* Change text color on hover */
     border: 2px solid black; /* Change border on hover */
     transform: scale(1.05); /* Slightly enlarge the card */
@@ -31,7 +31,7 @@
 
 .card img {
     border-radius: 8px; /* Rounded corners for images */
-    height: 200px; /* Fixed height */
+    height: 420px; /* Fixed height */
     width: 100%; /* Full width of the card */
     object-fit: cover; /* Maintain aspect ratio */
 }
