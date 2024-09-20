@@ -221,8 +221,8 @@ body {
 }
 
 .vertical-line {
-    border-left: 2px solid white; /* Vertical line color */
-    height: auto; /* You can also use 100% or set a specific height */
+    border-left: 2px solid rgb(255, 242, 0); /* Vertical line color */
+    height: 100%; /* You can also use 100% or set a specific height */
     margin: 0 1rem;
 }
 
