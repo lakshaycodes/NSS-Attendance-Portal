@@ -175,13 +175,15 @@ body {
 }
 
 .social-icons {
-    
     display: flex;
 }
-
+.social-icons img{
+    width: 45px;
+    margin: 0 5px;
+}
 .social-icon {
-    width: 35px;
-    margin: 0 10px;
+    width: 45px;
+    margin: 0 5px;
 }
 .social-icon:hover{
     transform: scale(1.15);
