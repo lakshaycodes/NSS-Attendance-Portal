@@ -175,14 +175,18 @@ body {
 }
 
 .social-icons {
+    
     display: flex;
 }
 
 .social-icon {
-    width: 30px;
+    width: 35px;
     margin: 0 10px;
 }
-
+.social-icon:hover{
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
+}
 .links {
     display: flex;
     justify-content: space-around;
