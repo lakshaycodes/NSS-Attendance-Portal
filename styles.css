@@ -155,15 +155,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
-    margin: 2rem;
-}
-
 /* Footer styles */
 .footer {
-    background-color: #1c2331;
+    background-color:  #19366b;
     color: white;
-    padding: 2rem;
     text-align: center;
 }
 
