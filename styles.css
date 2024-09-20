@@ -181,7 +181,11 @@ body {
     width: 45px;
     margin: 0 5px;
 }
-
+.social-icon{
+    width: 45px;
+    margin: 0 8px;
+    padding: 3px;
+}
 .social-icons img:hover{
     transform: scale(1.15);
     transition: all 0.3s ease-in-out;
