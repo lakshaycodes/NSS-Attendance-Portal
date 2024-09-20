@@ -33,17 +33,17 @@
     max-width: 1200px; /* Optional: limit max width if necessary */
     padding: 0 20px; /* Adjust padding as needed */
 }
-
 .logos img {
-    width: 80px;
+    width: 120px;
     height: auto;
     margin: 0 10px; /* Add margin between logos */
+    padding: 10px;
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #19366b;
-    padding: 10px 0;
+    padding: 10px ;
     width: 100vw; /* Full-width navigation bar */
     text-align: center;
 }
@@ -66,10 +66,11 @@
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
+    padding:10px;
 }
 
 .navbar ul li a:hover {
-    color: #ffa500; /* Hover effect for links */
+    color: red; /* Hover effect for links */
 }
 
 /* Banner Section */
