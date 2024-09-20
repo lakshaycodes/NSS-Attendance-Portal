@@ -19,6 +19,7 @@
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color */
     transition: all 0.3s ease-in-out; /* Smooth transitions */
+    border: 2px solid black;
 }
 
 .card:hover {
