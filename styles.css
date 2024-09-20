@@ -127,7 +127,7 @@ section {
     align-items: center;
     gap: 20px;
 }
-/* nnn */
+
 .profile img {
     width: 150px;
     height: 150px;
@@ -221,9 +221,9 @@ body {
 }
 
 .vertical-line {
-    border-left: 2px solid white; /* Vertical line */
-    height: 100%; /* Full height of the section */
-    margin: 0 1rem; /* Space between the line and content */
+    border-left: 2px solid white; /* Vertical line color */
+    height: auto; /* You can also use 100% or set a specific height */
+    margin: 0 1rem;
 }
 
 .copyright {
