@@ -13,6 +13,7 @@
 .header {
     background-color: white;
     padding-top : 10px 0; /* Adjusted padding */
+    border-bottom: 10px;
 }
 
 /* Header Content */
@@ -229,5 +230,3 @@ body {
     margin-top: 2rem;
     text-align: center; /* Centered copyright text */
 }
-
-
