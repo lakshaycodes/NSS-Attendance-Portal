@@ -177,14 +177,10 @@ body {
 .social-icons {
     display: flex;
 }
-.social-icons img{
-    width: 45px;
-    margin: 0 5px;
-}
 .social-icon{
-    width: 45px;
+    width: 50px;
     margin: 0 8px;
-    padding: 3px;
+    padding: 2px;
 }
 .social-icons img:hover{
     transform: scale(1.15);
