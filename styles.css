@@ -30,8 +30,8 @@
     justify-content: space-between; /* Spread logos evenly */
     align-items: center;
     width: 100%; /* Ensure logos take the full width */
-    max-width: 1200px; /* Optional: limit max width if necessary */
-    padding: 0 20px; /* Adjust padding as needed */
+    /* max-width: 1200px; Optional: limit max width if necessary */
+    padding: 0 10px; /* Adjust padding as needed */
 }
 .logos img {
     width: 120px;
@@ -39,7 +39,10 @@
     margin: 0 10px; /* Add margin between logos */
     padding: 10px;
 }
-
+.lo img{
+    height:100px;
+    width: 200px;
+}
 /* Navigation Bar */
 .navbar {
     background-color: #19366b;
