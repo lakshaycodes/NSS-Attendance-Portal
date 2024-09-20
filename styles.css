@@ -183,23 +183,29 @@ body {
     width: 35px;
     margin: 0 10px;
 }
+<<<<<<< Updated upstream
 .social-icon:hover{
     transform: scale(1.15);
     transition: all 0.3s ease-in-out;
 }
+=======
+>>>>>>> Stashed changes
 .links {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start; /* Aligns content to the top */
     margin: 2rem 0;
 }
 
 .link-column {
     flex: 1;
     margin: 0 1rem;
+    text-align: left; /* Align text to the left */
 }
 
 .link-column h6 {
     font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
 }
 
 .link-column p {
@@ -215,7 +221,13 @@ body {
     text-decoration: underline;
 }
 
-.copyright {
-    margin-top: 2rem;
+.vertical-line {
+    border-left: 5px solid white; /* Vertical line */
+    height: 100%;
+    margin: 0 1rem; /* Space between the line and content */
 }
 
+.copyright {
+    margin-top: 2rem;
+    text-align: center; /* Centered copyright text */
+}
