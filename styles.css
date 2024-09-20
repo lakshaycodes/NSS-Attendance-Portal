@@ -13,7 +13,7 @@
 .header {
     background-color: white;
     border-bottom: 3px solid #19366b;
-    padding: 10px 0; /* Adjusted padding */
+    padding-top : 10px 0; /* Adjusted padding */
 }
 
 /* Header Content */
