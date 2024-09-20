@@ -5,9 +5,8 @@
     margin: 20px auto;
     max-width: 1200px;
 }
-
 .card {
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -17,13 +16,18 @@
     width: calc(30% - 20px); /* 3 cards in a row with space */
     box-sizing: border-box;
 }
-
+.card:hover{
+    background-color: #5168d0;
+    color: white;
+    border: 2px solid black;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
 .card img {
     border-radius: 50%;
     height: 200px;
     width: 200px;
 }
-
 .card h3 {
     margin: 10px 0 5px;
     font-size: 1.2em;
