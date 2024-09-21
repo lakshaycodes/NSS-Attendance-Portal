@@ -3,6 +3,7 @@
     background-color: white;
     padding-top : 10px 0; /* Adjusted padding */
     border-bottom: 10px;
+    position: relative; /* Ensure position is relative for the line */
 }
 
 /* Header Content */
@@ -51,7 +52,7 @@
 .navbar ul li {
     margin: 0 15px;
     position: relative; /* Add this for proper positioning */
-}
+}   
 
 .navbar ul li a {
     color: white;
@@ -62,7 +63,23 @@
     padding: 10px;
     outline: none; /* Remove the outline */
 }
+.navbar ul li a.active {
+    background-color: red; /* Color when active */
+    color: white; /* Ensure text color contrasts */
+}
 
 .navbar ul li:hover a {
     background-color: red; /* Change background on hover */
+}
+
+/* Red Line Under Header */
+.header::after {
+    content: "";
+    display: block;
+    height: 3px; /* Adjust thickness as needed */
+    background-color: red; /* Color of the line */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
