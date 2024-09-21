@@ -1,0 +1,81 @@
+/* Footer Section */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer styles */
+.footer {
+    background-color:  #19366b;
+    color: white;
+    text-align: center;
+    border-bottom: 20px solid #19366b;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2600ff;
+    padding: 1rem;
+}
+
+.social-media-text {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+}
+.social-icon{
+    width: 50px;
+    margin: 0 8px;
+    padding: 2px;
+}
+.social-icons img:hover{
+    transform: scale(1.15);
+    transition: all 0.3s ease-in-out;
+}
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Aligns content to the top */
+    margin: 1rem 0;
+}
+
+.link-column {
+    flex: 1;
+    margin: 0 1rem;
+    text-align: left; /* Align text to the left */
+}
+
+.link-column h6 {
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+}
+
+.link-column p {
+    margin: 0.5rem 0;
+}
+
+.link-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.link-column a:hover {
+    text-decoration: underline;
+}
+
+.vertical-line {
+    border-left: 2px solid rgb(255, 242, 0); /* Vertical line color */
+    height: 100%; /* You can also use 100% or set a specific height */
+    margin: 0 1rem;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center; /* Centered copyright text */
+}

@@ -1,0 +1,68 @@
+/* Header Section */
+.header {
+    background-color: white;
+    padding-top : 10px 0; /* Adjusted padding */
+    border-bottom: 10px;
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logos Section */
+.logos {
+    display: flex;
+    justify-content: space-between; /* Spread logos evenly */
+    align-items: center;
+    width: 100%; /* Ensure logos take the full width */
+    /* max-width: 1200px; Optional: limit max width if necessary */
+    padding: 0 10px; /* Adjust padding as needed */
+}
+.logos img {
+    width: 120px;
+    height: auto;
+    margin: 0 10px; /* Add margin between logos */
+    padding: 10px;
+}
+.lo img{
+    height:100px;
+    width: 200px;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #19366b;
+    padding: 10px ;
+    width: 100vw; /* Full-width navigation bar */
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    position: relative; /* Add this for proper positioning */
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    outline: none; /* Remove the outline */
+}
+
+.navbar ul li:hover a {
+    background-color: red; /* Change background on hover */
+}

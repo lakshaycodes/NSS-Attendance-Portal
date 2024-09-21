@@ -1,83 +1,52 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+/* Table Styles */
+.notice-section{
+    padding: 0px 30px 30px 30px;
+    /* padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px; */
 }
-
-.notice-section {
-    padding: 40px;
-    text-align: center;
-    background-color: white;
-}
-
-.notice-section h1 {
-    color: #19366b;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-.notices-container {
-    display: flex;
-    flex-direction: column; /* Stack notices vertically */
-    align-items: stretch; /* Stretch notices to full width */
-    gap: 20px;
-}
-
-/* Individual Notice Card */
-.notice-card {
-    background-color: #fff;
-    border: 2px solid #19366b;
-    border-radius: 10px;
-    padding: 20px;
+.notice-table {
     width: 100%; /* Full width */
-    max-width: none; /* Remove max-width to use full width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-collapse: collapse; /* Remove space between cells */
+    margin-top: 30px; /* Space above the table */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border: 1px solid black;
+}
+/* Table Header Styles */
+.notice-table th {
+    background-color: #19366b; /* Header background */
+    color: white; /* Header text color */
+    font-weight: bold; /* Bold header text */
+    font-size: 1.2rem; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Change font style */
+    text-align: left; /* Align text to the left */
+    padding: 15px; /* Padding for header cells */
 }
 
-.notice-card:hover {
-    transform: scale(1.02); /* Slight hover effect */
+.notice-table td {
+    padding: 15px; /* Padding for cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid black; /* Border for rows */
 }
 
-/* Notice Date */
-.notice-date {
-    background-color: #19366b;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 15px;
+.notice-table th {
+    background-color: #19366b; /* Header background */
+    color: white; /* Header text color */
+    font-weight: bold; /* Bold header text */
 }
 
-/* Notice Content */
-.notice-content h2 {
-    font-size: 1.5rem;
-    color: #19366b;
-    margin-bottom: 10px;
+.notice-table tr:hover {
+    background-color: #f5f5f5; /* Hover effect for rows */
 }
 
-.notice-content p {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* Notice Read More Link */
 .notice-link {
-    color: #19366b;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid #19366b;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    color: #19366b; /* Link color */
+    font-weight: bold; /* Bold link text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease-in-out; /* Transition for color change */
 }
 
 .notice-link:hover {
-    background-color: #19366b;
-    color: white;
+    color: red; /* Change color on hover */
 }
