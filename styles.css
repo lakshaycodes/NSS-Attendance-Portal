@@ -8,8 +8,11 @@
 
 /* Body Styles */
 body {
-    background-color: #eaeaea;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px; /* Added padding for overall spacing */
 }
+
 
 /* Banner Section */
 .banner {
@@ -47,55 +50,51 @@ body {
 /* Welcome Message Section */
 .welcome-message {
     background-color: #ffffff;
-    padding: 30px;
-    margin: 20px;
+    padding: 10px;
+    margin: 20px 0; /* Margin adjusted for top/bottom */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.welcome-message:hover {
-    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left align text */
+    animation: fadeIn 1s ease-in-out;
+    margin-left: auto;
+    margin-right: auto; /* Center the welcome message */
 }
 
 .welcome-message h2 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-    animation: slideIn 1s ease-in;
+    color: #2c3e50; /* Formal color */
+    margin-bottom: 15px;
 }
 
 /* Messages Section */
 .messages {
-    margin: 20px;
+    margin: 20px auto;
 }
 
 /* Individual Message Styles */
 .message {
     background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin: 20px 0; /* Margin adjusted for top/bottom */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    animation: slideIn 0.8s ease forwards;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left align text */
+    animation: fadeIn 1s ease-in-out;
+    margin-left: auto;
+    margin-right: auto; /* Center the welcome message */
 }
 
 .message h3 {
-    color: #2980b9;
+    color: #2980b9; /* Formal color */
     margin-bottom: 10px;
-    text-align: left;
 }
 
 .profile-photo {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
+    width: 190px;
+    height: 190px; /* Set height equal to width for a perfect circle */
+    border-radius: 50%; /* Ensures a round shape */
     float: left;
     margin-right: 15px;
 }
-
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -120,39 +119,11 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 80px;
+        width: 70px;
     }
 
     .welcome-message, .message {
         margin: 10px;
         padding: 20px;
     }
-}
-
-/* Color Palette */
-:root {
-    --primary-color: #2980b9;
-    --secondary-color: #27ae60;
-    --background-color: #f4f4f4;
-    --text-color: #34495e;
-}
-
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-/* Button Style */
-button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
 }
