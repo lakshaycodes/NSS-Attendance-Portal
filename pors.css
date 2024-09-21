@@ -1,40 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.por-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.por-section h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #19366b;
+}
+
+h1{
+    text-align: left; /* Align title to the left */
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #19366b; /* Color for the title */
+}
+
+.por-description {
+    text-align: left; /* Align paragraph to the left */
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px auto;
+    justify-content: center;
+    margin: 0 auto;
     max-width: 1200px;
 }
+
 .card {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
     text-align: center;
-    width: calc(30% - 20px); /* 3 cards in a row with space */
-    box-sizing: border-box;
+    width: calc(30% - 30px); /* 3 cards in a row with space */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover{
+
+.card:hover {
     background-color: #19366b;
     color: white;
-    border: 2px solid black;
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+
 .card img {
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
+
+.card:hover img {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
 .card h3 {
-    margin: 10px 0 5px;
     font-size: 1.2em;
+    margin: 5px 0;
 }
 
 .card p {
     margin: 0;
     color: #555;
 }
-
