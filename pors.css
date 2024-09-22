@@ -50,7 +50,7 @@ h1{
     margin: 15px;
     padding: 20px;
     text-align: center;
-    width: calc(30% - 30px); /* 3 cards in a row with space */
+    width: calc(30% - 07px); /* 3 cards in a row with space */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -79,6 +79,7 @@ h1{
 }
 
 .card h3 {
+    color: black;
     font-size: 1.2em;
     margin: 5px 0;
 }
