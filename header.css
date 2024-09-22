@@ -1,9 +1,9 @@
 /* Header Section */
 .header {
     background-color: white;
-    padding-top : 10px 0; /* Adjusted padding */
+    padding-top: 10px;
     border-bottom: 10px;
-    position: relative; /* Ensure position is relative for the line */
+    position: relative;
 }
 
 /* Header Content */
@@ -17,27 +17,28 @@
 /* Logos Section */
 .logos {
     display: flex;
-    justify-content: space-between; /* Spread logos evenly */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure logos take the full width */
-    /* max-width: 1200px; Optional: limit max width if necessary */
-    padding: 0 10px; /* Adjust padding as needed */
+    width: 100%;
+    padding: 0 10px;
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
 }
 .logos img {
     width: 120px;
     height: auto;
-    margin: 0 10px; /* Add margin between logos */
+    margin: 0 10px;
     padding: 10px;
 }
-.lo img{
-    height:100px;
+.lo img {
+    height: 100px;
     width: 200px;
 }
+
 /* Navigation Bar */
 .navbar {
     background-color: #19366b;
-    padding: 10px ;
-    width: 100vw; /* Full-width navigation bar */
+    padding: 10px;
+    width: 100vw;
     text-align: center;
 }
 
@@ -47,12 +48,13 @@
     justify-content: center;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
 }
 
 .navbar ul li {
     margin: 0 15px;
-    position: relative; /* Add this for proper positioning */
-}   
+    position: relative;
+}
 
 .navbar ul li a {
     color: white;
@@ -61,25 +63,88 @@
     font-size: 1rem;
     transition: background-color 0.3s ease;
     padding: 10px;
-    outline: none; /* Remove the outline */
-}
-.navbar ul li a.active {
-    background-color: red; /* Color when active */
-    color: white; /* Ensure text color contrasts */
-}
-
-.navbar ul li:hover a {
-    background-color: red; /* Change background on hover */
+    outline: none;
 }
 
 /* Red Line Under Header */
 .header::after {
     content: "";
     display: block;
-    height: 3px; /* Adjust thickness as needed */
-    background-color: red; /* Color of the line */
+    height: 3px;
+    background-color: red;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For screens up to 1024px (tablets) */
+@media (max-width: 1024px) {
+    .logos img {
+        width: 100px; /* Smaller logo sizes for tablets */
+        margin: 5px;
+    }
+    
+    .lo img {
+        height: 80px;
+        width: 160px; /* Adjust secondary logos for smaller screens */
+    }
+    
+    .navbar ul li a {
+        font-size: 0.9rem; /* Slightly smaller font for tablet screens */
+        padding: 8px;
+    }
+}
+
+/* For screens up to 768px (mobile) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack logos and navigation vertically */
+    }
+    
+    .logos {
+        flex-direction: column; /* Stack logos vertically */
+        align-items: center;
+    }
+
+    .logos img {
+        width: 80px; /* Smaller logo sizes for mobile */
+    }
+
+    .lo img {
+        height: 60px;
+        width: 120px;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Add vertical space between nav items */
+    }
+    
+    .navbar ul li a {
+        font-size: 0.8rem; /* Smaller font for mobile */
+        padding: 5px;
+    }
+}
+
+/* For screens up to 480px (small mobile devices) */
+@media (max-width: 480px) {
+    .logos img {
+        width: 60px; /* Further smaller logo sizes */
+    }
+    
+    .lo img {
+        height: 50px;
+        width: 100px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.7rem; /* Even smaller font for small mobile */
+        padding: 4px;
+    }
 }
