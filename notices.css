@@ -1,4 +1,7 @@
 /* Table Styles */
+body{
+    background-color: #e0f7fa; /* Light cyan background */
+}
 .notice-section{
     padding: 0px 30px 30px 30px;
     background-color: #e0f7fa; /* Light cyan background */

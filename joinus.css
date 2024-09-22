@@ -1,4 +1,12 @@
 /* Join Us Section */
+body{
+    background-color: #e0f7fa; /* Light cyan background */
+}
+.join-us-section {
+    background-color: #f4f4f4;
+    text-align: center;
+    background-color: #e0f7fa; /* Light cyan background */
+}
 
 .section-title {
     font-size: 2.5rem;
@@ -14,10 +22,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+.por-description {
+    text-align: left; /* Align paragraph to the left */
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    padding-left: 15px;
+}
 
 .recruitment-process {
     text-align: left;
-    max-width: 800px;
+    width: 95%;
     margin: 0 auto;
     background-color: #fff;
     padding: 30px;
@@ -38,10 +53,9 @@
 }
 
 /* Section Spacing */
-.join-us-section h2,
 .join-us-section p {
     margin: 0;
-    padding: 10px 0;
+    padding: 15px;
 }
 
 .join-us-section h2 {
@@ -56,7 +70,7 @@ h1 {
     padding-left: 15px;
 }
 
-.discri {
+p {
     text-align: left; /* Align paragraph to the left */
     font-size: 1.2em;
     color: #555;
