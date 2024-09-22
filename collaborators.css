@@ -22,7 +22,7 @@
 }
 
 .collaborator:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 .collaborators h2{
     color: #003366;
