@@ -1,7 +1,6 @@
 /* Header Section */
 .header {
     background-color: white;
-    padding-top: 10px;
     border-bottom: 10px;
     position: relative;
 }
@@ -21,14 +20,15 @@
     align-items: center;
     width: 100%;
     padding: 0 10px;
-    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
 }
+
 .logos img {
     width: 120px;
     height: auto;
     margin: 0 10px;
     padding: 10px;
 }
+
 .lo img {
     height: 100px;
     width: 200px;
@@ -48,7 +48,6 @@
     justify-content: center;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
 }
 
 .navbar ul li {
@@ -63,7 +62,15 @@
     font-size: 1rem;
     transition: background-color 0.3s ease;
     padding: 10px;
-    outline: none;
+}
+
+.navbar ul li a.active {
+    background-color: red;
+    color: white;
+}
+
+.navbar ul li:hover a {
+    background-color: red; /* Red hover effect */
 }
 
 /* Red Line Under Header */
@@ -71,13 +78,12 @@
     content: "";
     display: block;
     height: 3px;
-    background-color: red;
+    background-color: red; /* Red line below the header */
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
 }
-
 /* RESPONSIVE DESIGN */
 
 /* For screens up to 1024px (tablets) */
