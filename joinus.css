@@ -1,11 +1,14 @@
 /* Join Us Section */
 body{
     background-color: #e0f7fa; /* Light cyan background */
+    
 }
 .join-us-section {
     background-color: #f4f4f4;
     text-align: center;
     background-color: #e0f7fa; /* Light cyan background */
+
+    border-bottom: 35px solid #e0f7fa;
 }
 
 .section-title {
