@@ -1,41 +1,104 @@
 .events-section {
-    padding: 40px;
-    background-color: #f9f9f9;
-  }
-  
-  .events-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #333; /* Adjust color as needed */
-  }
-  
-  .event {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 15px;
-    background-color: white; /* Background for each event block */
-    border: 1px solid #ddd; /* Border around each block */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* To prevent overflow of images */
-    transition: transform 0.2s; /* Smooth scaling on hover */
-  }
-  
-  .event:hover {
-    transform: scale(1.05); /* Slightly scale the block on hover */
-  }
-  
-  .event-image {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd; /* Border below the image */
-  }
-  
-  .event-title {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #333; /* Adjust color as needed */
-    text-align: center;
-  }
-  
+  padding: 10px;
+  background-color: #e0f7fa; /* Light cyan background */
+}
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap */
+  justify-content: center; /* Center items */
+  padding: 0px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  background-color: white; /* Background for each event block */
+  border: 1px solid #19366b; /* Border color matching NSS */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* To prevent overflow of images */
+  width: 300px; /* Increase the width of each event block */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+.event:hover {
+  transform: scale(1.05); /* Slightly scale the block on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Slider container */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid #19366b; /* Border below the image matching NSS */
+}
+
+/* Image slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition between images */
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the area */
+}
+
+/* Arrows */
+.prev-arrow, .next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1;
+  user-select: none;
+}
+
+/* Positioning the arrows */
+.prev-arrow {
+  left: 5px;
+}
+
+.next-arrow {
+  right: 5px;
+}
+
+/* Hide arrows initially (optional) and show them on hover */
+.slider-container:hover .prev-arrow,
+.slider-container:hover .next-arrow {
+  display: block;
+}
+.event-title {
+  margin: 10px 0; /* Add some space above and below the title */
+  font-size: 1.2em; /* Increase font size */
+  color: #19366b; /* Match title color with NSS color */
+  text-align: center; /* Center align the title */
+  font-weight: bold; /* Make the title bold */
+}
+
+
+h1 {
+  text-align: left; /* Align title to the left */
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #19366b; /* Color for the title */
+  padding-left: 15px;
+}
+
+p {
+  text-align: left; /* Align paragraph to the left */
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
