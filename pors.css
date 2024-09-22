@@ -55,7 +55,6 @@ h1{
     width: calc(30% - 07px); /* 3 cards in a row with space */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
     background-color: #19366b;
     color: white;
@@ -66,7 +65,6 @@ h1{
 .card:hover h3{
     color: white;
 }
-
 .card img {
     border-radius: 50%;
     height: 150px;
@@ -74,9 +72,9 @@ h1{
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
-
 .card:hover img {
     transform: scale(1.1); /* Zoom in effect on hover */
+    border: 2px solid white;
 }
 
 .card h2 {
