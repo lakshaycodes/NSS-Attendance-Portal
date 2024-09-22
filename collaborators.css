@@ -1,0 +1,33 @@
+.collaborators {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.collaborator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 20px; /* Space between columns */
+}
+
+.collaborator {
+    display: flex; /* Use flexbox to center logos */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the link in the grid cell */
+}
+.collaborator img {
+    max-width: 60%; /* Make logos responsive */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.collaborator:hover img {
+    transform: scale(1.2);
+}
+.collaborators h2{
+    color: #003366;
+    /* font-weight: 800; */
+    font-size: 200%;
+}
+
+
