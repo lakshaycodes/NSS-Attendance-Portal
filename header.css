@@ -71,6 +71,7 @@
 
 .navbar ul li:hover a {
     background-color: red; /* Red hover effect */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Red Line Under Header */
