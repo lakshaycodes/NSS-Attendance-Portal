@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(178, 24, 24);
+    background-color: red;
     padding: 5px;
 }
 
