@@ -1,67 +1,66 @@
-/* Footer Section */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 /* Footer styles */
 .footer {
-    background-color:  #19366b;
+    background-color: #19366b;
     color: white;
+    /* padding: 20px; */
     text-align: center;
-    border-bottom: 20px solid #19366b;
 }
 
+/* Social media section in red */
 .social-media {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: red;
-    padding: 5px;
+    padding: 10px;
 }
-
+ 
 .social-media-text {
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .social-icons {
     display: flex;
 }
-.social-icon{
-    width: 50px;
+
+.social-icons a {
     margin: 0 8px;
-    padding: 2px;
+    width: 30px;
+    margin: 0 8px;
 }
-.social-icons img:hover{
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
     transform: scale(1.15);
-    transition: all 0.3s ease-in-out;
 }
+
+/* Links section */
 .links {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* Aligns content to the top */
-    margin: 1rem 0;
+    align-items: flex-start;
+    margin: 20px 0;
 }
 
 .link-column {
     flex: 1;
     margin: 0 1rem;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .link-column h6 {
     font-weight: bold;
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.2rem;
 }
 
-.link-column p {
-    margin: 0.5rem 0;
-}
-
-.link-column a {
+.link-column p, .link-column a {
     color: white;
+    margin: 0.5rem 0;
     text-decoration: none;
 }
 
@@ -70,12 +69,75 @@ body {
 }
 
 .vertical-line {
-    border-left: 2px solid #2600ff; /* Vertical line color */
-    height: 100%; /* You can also use 100% or set a specific height */
-    margin: 0 1rem;
+    border-left: 2px solid white;
+    height: 100%;
+    margin: 0 20px;
 }
 
+/* Copyright section */
 .copyright {
-    margin-top: 2rem;
-    text-align: center; /* Centered copyright text */
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+
+/* For tablets */
+@media (max-width: 1024px) {
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-column {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .social-media {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media-text {
+        margin-bottom: 10px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .link-column {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .social-icon {
+        width: 30px;
+    }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 5px;
+    }
+
+    .social-icon {
+        width: 25px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .link-column {
+        margin-bottom: 15px;
+    }
 }

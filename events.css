@@ -3,7 +3,6 @@
   background-color: #e0f7fa; /* Light cyan background */
 }
 
-
 .main {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap */
@@ -20,8 +19,15 @@
   border: 1px solid #19366b; /* Border color matching NSS */
   border-radius: 8px; /* Rounded corners */
   overflow: hidden; /* To prevent overflow of images */
-  width: 300px; /* Increase the width of each event block */
+  width: 300px; /* Fixed width of each event block */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+/* Make the event block responsive */
+@media (max-width: 768px) {
+  .event {
+    width: 90%; /* Take up more width on smaller screens */
+  }
 }
 
 .event:hover {
@@ -45,7 +51,7 @@
 
 .event-image {
   width: 100%;
-  height: 100%;
+  height: auto; /* Ensure height adjusts to maintain aspect ratio */
   object-fit: cover; /* Ensure image covers the area */
 }
 
@@ -73,11 +79,12 @@
   right: 5px;
 }
 
-/* Hide arrows initially (optional) and show them on hover */
+/* Show arrows on hover */
 .slider-container:hover .prev-arrow,
 .slider-container:hover .next-arrow {
   display: block;
 }
+
 .event-title {
   margin: 10px 0; /* Add some space above and below the title */
   font-size: 1.2em; /* Increase font size */
@@ -85,7 +92,6 @@
   text-align: center; /* Center align the title */
   font-weight: bold; /* Make the title bold */
 }
-
 
 h1 {
   text-align: left; /* Align title to the left */
@@ -102,6 +108,22 @@ p {
   margin-bottom: 40px;
   padding-left: 15px;
 }
-footer p{
+
+footer p {
   color: white;
+}
+
+/* Additional responsive styles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Smaller title on very small screens */
+  }
+  
+  p {
+    font-size: 1em; /* Smaller paragraph text */
+  }
+
+  .event-title {
+    font-size: 1.1em; /* Smaller event title */
+  }
 }

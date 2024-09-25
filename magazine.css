@@ -1,17 +1,18 @@
-body{
+body {
     background-color: #e0f7fa; /* Light cyan background */
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 1200px; /* Limit max width */
 }
 
 .card {
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 2px solid black; /* Black border */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -22,15 +23,15 @@ body{
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color */
     transition: all 0.3s ease-in-out; /* Smooth transitions */
-    border: 2px solid black;
+    display: flex; /* Use flexbox to arrange items vertically */
+    flex-direction: column; /* Vertical arrangement */
 }
 
 .card:hover {
     background-color: #19366b; /* Change background on hover */
     color: white; /* Change text color on hover */
-    border: 2px solid black; /* Change border on hover */
+    border: 2px solid black; /* Keep black border on hover */
     transform: scale(1.05); /* Slightly enlarge the card */
-    transition: all 0.3s ease-in-out;
 }
 
 .card img {
@@ -38,6 +39,7 @@ body{
     height: 420px; /* Fixed height */
     width: 100%; /* Full width of the card */
     object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below image */
 }
 
 .card h2 {
@@ -45,7 +47,7 @@ body{
     font-size: 1.8em; /* Font size for the heading */
 }
 
-/* New styles for the magazine section title */
+/* Styles for the magazine section title */
 h1 {
     text-align: left; /* Align title to the left */
     margin: 20px 0;
@@ -61,6 +63,20 @@ p {
     margin-bottom: 40px;
     padding-left: 15px;
 }
-footer p{
-    color: white;
+
+footer p {
+    color: white; /* Footer text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .card {
+        width: calc(45% - 20px); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: calc(100% - 20px); /* 1 card in a row */
+    }
 }
