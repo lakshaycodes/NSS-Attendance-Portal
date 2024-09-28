@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0 10px;
+    padding: 8px;
     gap: 20px; /* Added gap for spacing between logos */
 }
 
@@ -43,10 +43,16 @@
 }
 
 .lo img {
-    height: 100px;
-    width: 200px;
+    height: auto;
+    width: 180px;
+    padding: 10px;
 }
-
+.no img{
+    margin-right: 200px;
+}
+.nu img{
+    margin-left: 200px;
+}
 /* Navigation Bar */
 .navbar {
     background-color: #19366b;
