@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 8px;
+    padding: 0px 10px;
     gap: 20px; /* Added gap for spacing between logos */
 }
 
@@ -46,12 +46,6 @@
     height: auto;
     width: 180px;
     padding: 10px;
-}
-.no img{
-    margin-right: 170px;
-}
-.nu img{
-    margin-left: 170px;
 }
 /* Navigation Bar */
 .navbar {
