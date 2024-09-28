@@ -1,0 +1,64 @@
+body {
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+    max-width: 1200px;
+    margin: 40px auto; /* Add some margin above and below */
+    padding: 20px;
+}
+
+.card {
+    flex: 0 1 calc(30% - 20px); /* Base size for cards */
+    margin: 10px; /* Add margin for spacing */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(45% - 20px); /* Two cards in a row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 1 100%; /* One card in a row on extra small screens */
+    }
+}
+
+/* Centering the last two cards while keeping them the same size */
+.card:nth-child(4), 
+.card:nth-child(5) {
+    flex: 0 1 calc(30% - 20px); /* Maintain the same size */
+    margin: 10px; /* Ensure proper spacing */
+}
+
+/* Adjust overall card-container layout */
+.card-container {
+    justify-content: space-between; /* Default to space between */
+}
+
+/* For small screens, ensure the last two cards stack properly */
+@media (max-width: 768px) {
+    .card:nth-child(4), 
+    .card:nth-child(5) {
+        flex: 0 1 calc(45% - 20px); /* Center two cards in the second row */
+    }
+}
