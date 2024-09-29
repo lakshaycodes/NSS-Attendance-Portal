@@ -1,16 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .village-section {
     padding: 10px;
     background-color: #e0f7fa; /* Light cyan background */
-  }
-  
-  .main {
+}
+
+.main {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap */
     justify-content: center; /* Center items */
     padding: 0px;
-  }
-  
-  .village {
+}
+
+.village {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,69 +24,74 @@
     background-color: white; /* Background for each village block */
     border: 2px solid #19366b; /* Border color matching NSS */
     border-radius: 8px; /* Rounded corners */
-    width: 300px; /* Fixed width of each village block */
+    width: calc(28% - 20px); /* 3 cards per row with smaller width */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
-  }
-  
-  /* Make the village block responsive */
-  @media (max-width: 768px) {
+}
+
+/* Make the village block responsive */
+@media (max-width: 768px) {
     .village {
-      width: 90%; /* Take up more width on smaller screens */
+        width: calc(45% - 20px); /* 2 cards per row on medium screens */
     }
-  }
-  
-  .village:hover {
+}
+
+@media (max-width: 480px) {
+    .village {
+        width: calc(100% - 20px); /* 1 card per row on small screens */
+    }
+}
+
+.village:hover {
     transform: scale(1.05); /* Slightly scale the block on hover */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-  }
- 
-  .village-image {
+}
+
+.village-image {
     width: 100%;
     height: auto; /* Ensure height adjusts to maintain aspect ratio */
     object-fit: cover; /* Ensure image covers the area */
     border-bottom: 2px solid #19366b;
-  }
-  
-  .village-title {
+}
+
+.village-title {
     margin: 10px 0; /* Add some space above and below the title */
     font-size: 1.2em; /* Increase font size */
     color: #19366b; /* Match title color with NSS color */
     text-align: center; /* Center align the title */
     font-weight: bold; /* Make the title bold */
-  }
-  
-  h1 {
+}
+
+h1 {
     text-align: left; /* Align title to the left */
     margin: 20px 0;
     font-size: 2.5em;
     color: #19366b; /* Color for the title */
     padding-left: 15px;
-  }
-  
-  p {
+}
+
+p {
     text-align: left; /* Align paragraph to the left */
     font-size: 1.2em;
     color: #555;
     margin-bottom: 40px;
     padding-left: 15px;
-  }
-  
-  footer p {
+}
+
+footer p {
     color: white;
-  }
-  
-  /* Additional responsive styles */
-  @media (max-width: 480px) {
+}
+
+/* Additional responsive styles */
+@media (max-width: 480px) {
     h1 {
-      font-size: 2em; /* Smaller title on very small screens */
+        font-size: 2em; /* Smaller title on very small screens */
     }
     
     p {
-      font-size: 1em; /* Smaller paragraph text */
+        font-size: 1em; /* Smaller paragraph text */
     }
-  
+
     .village-title {
-      font-size: 1.1em; /* Smaller village title */
+        font-size: 1.1em; /* Smaller village title */
     }
-  }
-  
+}
