@@ -51,6 +51,7 @@ body {
     height: auto; /* Ensure height adjusts to maintain aspect ratio */
     object-fit: cover; /* Ensure image covers the area */
     border-bottom: 2px solid #19366b;
+    border-radius: 7px;
 }
 
 .village-title {
