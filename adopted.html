@@ -5,36 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSS NSUT - Adopted Villages</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="adopted.css">
 </head>
 <body>
     <!-- Header Section -->
     <div id="header"></div> <!-- Placeholder for the header -->
+     
     <main>
-        <div class="card-container">
-            <a href="" class="card">
-                <img src="images/events-images/aids-red-run/1.jpg" alt="Image 1">
-            </a>
-            <a href="page2.html" class="card">
-                <img src="image2.jpg" alt="Image 2">
-            </a>
-            <a href="page3.html" class="card">
-                <img src="image3.jpg" alt="Image 3">
-            </a>
-            <a href="page4.html" class="card">
-                <img src="images/events-images/annual-sports-meet/1.jpg" alt="Image 4">
-            </a>
-            <a href="page5.html" class="card">
-                <img src="image5.jpg" alt="Image 5">
-            </a>
-        </div>
+        <section class="village-section">
+            <h1>Villages adopted by NSS NSUT</h1>
+            <p>Here are the villages adopted by NSS NSUT and the work done in these villages.</p>
+            
+            <div class="main">
+                <!-- Village 1 -->
+                <div class="village" data-name="Village 1" data-address="123 Main St, Village 1" data-head="John Doe" data-work="Organized health camps, cleanliness drives">
+                    <div class="enlarge">
+                        <img src="images/events-images/chess-tournament/cover.jpg" alt="Village 1" class="village-image">
+                    </div>
+                    <h3 class="village-title">Village 1</h3>
+                </div>
+
+                <!-- Village 2 -->
+                <div class="village" data-name="Village 2" data-address="456 Oak St, Village 2" data-head="Jane Smith" data-work="Adult literacy programs, tree plantation">
+                    <div class="enlarge">
+                        <img src="images/events-images/chess-tournament/cover.jpg" alt="Village 2" class="village-image">
+                    </div>
+                    <h3 class="village-title">Village 2</h3>
+                </div>
+
+                <!-- Village 3 -->
+                <div class="village" data-name="Village 3" data-address="789 Pine St, Village 3" data-head="Raj Patel" data-work="Skill development workshops, waste management training">
+                    <div class="enlarge">
+                        <img src="images/events-images/chess-tournament/cover.jpg" alt="Village 3" class="village-image">
+                    </div>
+                    <h3 class="village-title">Village 3</h3>
+                </div>
+
+                <!-- Village 4 -->
+                <div class="village" data-name="Village 4" data-address="101 Maple St, Village 4" data-head="Ayesha Khan" data-work="Women empowerment programs, health awareness camps">
+                    <div class="enlarge">
+                        <img src="images/events-images/chess-tournament/cover.jpg" alt="Village 4" class="village-image">
+                    </div>
+                    <h3 class="village-title">Village 4</h3>
+                </div>
+
+                <!-- Village 5 -->
+                <div class="village" data-name="Village 5" data-address="202 Cedar St, Village 5" data-head="Rahul Verma" data-work="Sanitation projects, children's education support">
+                    <div class="enlarge">
+                        <img src="images/events-images/chess-tournament/cover.jpg" alt="Village 5" class="village-image">
+                    </div>
+                    <h3 class="village-title">Village 5</h3>
+                </div>
+            </div>
+
+            <!-- Modal for showing more information -->
+            <div id="villageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalAddress"></p>
+                    <p id="modalHead"></p>
+                    <p id="modalWork"></p>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer Section -->
     <div id="footer"></div> <!-- Placeholder for the footer -->
-
-    <script src="header-footer.js"></script> <!-- Include the JS file -->
     
+    <script src="header-footer.js"></script> <!-- Include the JS file for header and footer -->
+    <script src="village-info.js"></script> <!-- Include the new JS file for village information -->
 </body>
 </html>
