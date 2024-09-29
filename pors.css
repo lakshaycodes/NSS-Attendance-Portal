@@ -32,46 +32,71 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    /* max-width: 1200px; */
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    perspective: 1000px; /* Add perspective for 3D effect */
     margin: 15px;
-    padding: 15px;
-    text-align: center;
-    width: calc(30% - 40px); /* 3 cards in a row with space */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Flexbox for vertical alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items */
+    width: calc(33.333% - 30px); /* 3 cards per row, adjust width */
+    height: 300px; /* Fixed height for cards */
+    box-sizing: border-box; /* Ensure padding and margin are included in total width */
 }
 
-.card:hover {
-    background-color: #19366b;
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Transition effect */
+    transform-style: preserve-3d; /* Preserve 3D effect */
 }
 
-.card:hover h3 {
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide back face */
+    border-radius: 7px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.card-front {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; /* Add padding */
+}
+
+.card-back {
+    background-color: #ffffff; /* Change background color to white */
+    color: black; /* Set text color to black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Rotate back face */
+    padding: 20px; /* Padding for back content */
+    border-radius: 7px; /* Match border radius with front */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Match box shadow with front */
+}
+
+.card-back h3 {
+    color: #19366b; /* Set the name color to the title color */
+}
+
+.card:hover .card-front {
+    background-color: #19366b; /* Change front background color on hover */
     color: white;
 }
 
 .card img {
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
+    height: 150px; /* Adjust image size */
+    width: 150px; /* Adjust image size */
     margin: 15px 0; /* Space around the image */
-    transition: transform 0.3s ease;
-}
-
-.card:hover img {
-    transform: scale(1.1); /* Zoom in effect on hover */
-    border: 2px solid white;
 }
 
 .card h2 {
@@ -80,19 +105,25 @@ h1 {
 }
 
 .card h3 {
-    color: black;
+    color: red;
     font-size: 1.2em;
     margin: 5px 0;
 }
 
+.card a {
+    color: #19366b; /* Set link color */
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .card {
-        width: calc(45% - 30px); /* Adjust width for smaller screens */
+        width: calc(50% - 30px); /* 2 cards per row on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: calc(90% - 30px); /* Adjust width for mobile screens */
+        width: calc(90% - 30px); /* 1 card per row on mobile screens */
     }
 }
