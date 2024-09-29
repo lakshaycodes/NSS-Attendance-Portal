@@ -127,49 +127,76 @@
     .header-content {
         flex-direction: column; /* Stack logos and navigation vertically */
     }
-    
+
     .logos {
-        flex-direction: column; /* Stack logos vertically */
+        flex-direction: row; /* Stack logos horizontally */
         align-items: center;
         gap: 10px; /* Reduced gap for mobile */
     }
 
     .logos img {
-        width: 80px; /* Smaller logo sizes for mobile */
+        display: none; /* Hide all logos by default */
     }
 
+    .nss-logo img,
+    .nsut-logo img,
+    .yas-logo img {
+        display: block; /* Show only NSS and NSUT logos */
+        width: 80px; /* Smaller width for mobile logos */
+        height: auto; /* Maintain aspect ratio */
+    }
     .lo img {
-        height: 60px;
-        width: 120px;
+        height: 80px; /* Smaller height for secondary logos */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .navbar {
+        padding: 5px; /* Reduce padding for the navbar */
     }
 
     .navbar ul {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items */
+        gap: 5px; /* Adjust space between items */
     }
 
     .navbar ul li {
-        margin: 10px 0; /* Add vertical space between nav items */
+        flex: 0 0 calc(33.33% - 5px); /* Set each link to take one-third of the width */
+        margin: 0; /* Remove margin for cleaner layout */
     }
     
     .navbar ul li a {
-        font-size: 0.8rem; /* Smaller font for mobile */
-        padding: 5px;
+        font-size: 0.6rem; /* Smaller font for mobile */
+        padding: 2px; /* Smaller padding for links */
+        text-align: center; /* Center the text */
     }
 }
 
 /* For screens up to 480px (small mobile devices) */
 @media (max-width: 480px) {
     .logos img {
-        width: 60px; /* Further smaller logo sizes */
+        display: none; /* Hide all logos by default */
+    }
+
+    .nss-logo img,
+    .nsut-logo img,
+    .yas-logo img {
+        display: block; /* Show only NSS and NSUT logos */
+        width: 60px; /* Even smaller width for small mobile logos */
+        height: auto; /* Maintain aspect ratio */
     }
     
     .lo img {
-        height: 50px;
-        width: 100px;
+        height: 60px; /* Smaller height for secondary logos */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .navbar {
+        padding: 3px; /* Further reduce padding for small devices */
     }
 
     .navbar ul li a {
-        font-size: 0.7rem; /* Even smaller font for small mobile */
-        padding: 4px;
+        font-size: 0.5rem; /* Even smaller font for small mobile */
+        padding: 1px; /* Smaller padding for links */
     }
 }
