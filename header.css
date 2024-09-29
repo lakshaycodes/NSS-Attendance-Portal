@@ -49,42 +49,49 @@
 }
 /* Navigation Bar */
 .navbar {
-    background-color: #19366b;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
+    background-color: #19366b; /* Navbar background color */
+    padding: 0px; /* Padding around the navbar */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
     gap: 20px; /* Space between navbar items */
 }
 
 .navbar ul li {
-    position: relative;
+    position: relative; /* Positioning for child elements */
 }
 
+/* Style for links */
 .navbar ul li a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1rem; /* Font size */
+    padding: 10px; /* Padding inside the link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color */
+    display: block; /* Make the link a block element to cover the entire li */
+}
+
+/* Active and hover state for the entire block */
+.navbar ul li:hover {
+    background-color: red; /* Background color for the whole block on hover */
 }
 
 .navbar ul li a.active {
-    background-color: red;
-    color: white;
+    background-color: red; /* Background color when link is active */
+    color: white; /* Text color for active link */
 }
 
+/* Maintain text color on hover */
 .navbar ul li:hover a {
-    background-color: red;
-    color: white;
+    color: white; /* Keep text color white on hover */
 }
 
 /* Red Line Under Header */
