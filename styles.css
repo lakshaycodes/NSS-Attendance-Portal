@@ -74,7 +74,7 @@ body {
 .notice-scroll p {
     display: inline-block; /* Keep paragraphs inline for formatting */
     margin-right: 50px; /* Space between notices */
-    font-size: 0.9em;
+    font-size: 0.9em; /* Slightly increase font size for better visibility */
 }
 
 /* Animation for Scrolling Effect */
@@ -156,8 +156,8 @@ body {
 
 /* Message Cards Section */
 .message-cards {
-    padding: 40px 20px;
-    background-color: #fff;
+    padding: 10px;
+    background-color: #e0f7fa;
 }
 
 /* Individual Card Styling */
@@ -232,6 +232,108 @@ body {
     background-color: #b71c1c;
 }
 
+.recent-events-section {
+    padding: 20px;
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+.recent-events-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and button */
+    align-items: center; /* Center vertically */
+    margin: 20px 0;
+}
+
+.recent-events-title {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #19366b; /* NSS color */
+    padding-left: 15px;
+}
+
+.recent-events-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recent-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid #19366b; /* NSS color */
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+.recent-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider container */
+.recent-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px solid #19366b; /* NSS color */
+}
+
+/* Image slider */
+.recent-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.recent-event-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Arrows */
+.recent-prev-arrow, .recent-next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    user-select: none;
+}
+
+/* Positioning the arrows */
+.recent-prev-arrow {
+    left: 5px;
+}
+
+.recent-next-arrow {
+    right: 5px;
+}
+
+/* Button to view all events */
+.view-all-events-button {
+    margin-left: 20px; /* Add some space between title and button */
+    padding: 10px 20px;
+    background-color: #19366b; /* NSS color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-all-events-button:hover {
+    background-color: #1565c0; /* Darker shade on hover */
+}
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
