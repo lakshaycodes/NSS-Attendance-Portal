@@ -20,6 +20,112 @@ body {
     overflow: hidden;
 }
 
+/* Notice Bar Styles */
+.notice-bar {
+    background-color: #003366; /* Dark blue background */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Spacing around the content */
+    display: flex; /* Flex layout for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between NEW NOTICES and button */
+    position: relative; /* Position for absolute children */
+    overflow: hidden; /* Prevent horizontal scrolling of the notice bar */
+    max-width: 100vw; /* Prevent horizontal overflow beyond the viewport */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Container for New Notices Text */
+.new-notices-container {
+    flex-shrink: 0; /* Prevent shrinking of this section */
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+/* Scrolling Notices Styles */
+.scrolling-notices {
+    flex: 1; /* Take up the remaining space between the two sections */
+    white-space: nowrap; /* Ensure the notices stay on a single line */
+    overflow: hidden; /* Hide any content that moves out of the container */
+    height: 40px; /* Set a fixed height for the scrolling area */
+    line-height: 40px; /* Align text vertically within the height */
+    display: flex; /* Use flex to align items horizontally */
+    align-items: center; /* Vertically center the text */
+    position: relative; /* Position for scrolling effect */
+    margin: 0 10px; /* Set margins on both sides */
+    box-sizing: border-box; /* Include padding in the element's width */
+    width: 100%; /* Ensure the scrolling area spans the full width of the container */
+}
+
+/* Individual notice links */
+.scrolling-notices a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    display: inline-block; /* Ensure notices are inline */
+}
+
+.scrolling-notices a:hover {
+    text-decoration: underline;
+}
+
+/* Show All Notices Button Styles */
+.show-all-notices-container {
+    flex-shrink: 0; /* Prevent shrinking of this section */
+    margin-left: 10px;
+}
+
+.show-all-notices-btn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.show-all-notices-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Scrolling animation only within the notice section */
+.scrolling-notices {
+    animation: scroll 15s linear infinite;
+    width: calc(100% - 250px); /* Ensure space for "NEW NOTICES" and button */
+    box-sizing: border-box; /* Include padding/margins in width calculation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .notice-bar {
+        flex-direction: column;
+        align-items: flex-start; /* Stack vertically */
+    }
+
+    .scrolling-notices {
+        margin: 10px 0; /* Add some spacing on smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .new-notices-text,
+    .show-all-notices-btn {
+        margin-bottom: 10px;
+    }
+
+    .scrolling-notices a {
+        margin: 0 10px;
+    }
+}
+
+
 .banner-image {
     width: 100%;
     height: 100%;
