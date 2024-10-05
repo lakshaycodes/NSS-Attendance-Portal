@@ -29,6 +29,7 @@
     width: 100%;
     padding: 0px 10px;
     gap: 20px; /* Added gap for spacing between logos */
+    margin: 5px;
 }
 
 .logos img {
