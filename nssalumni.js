@@ -1,19 +1,15 @@
-// JavaScript to handle the expansion of alumni card
-document.addEventListener('DOMContentLoaded', function() {
-    const alumniCards = document.querySelectorAll('.alumni-card');
+function showDetails(cardId) {
+    // Dim the background
+    document.body.classList.add('dimmed');
 
-    // Iterate through each alumni card
-    alumniCards.forEach(card => {
-        // Toggle the 'active' class on click to show/hide the message
-        card.addEventListener('click', function() {
-            // Close other open cards if necessary
-            alumniCards.forEach(c => {
-                if (c !== this) {
-                    c.classList.remove('active');
-                }
-            });
-            // Toggle the active state of the clicked card
-            this.classList.toggle('active');
-        });
-    });
+    // Show the details for the clicked card
+    document.getElementById(cardId + '-details').style.display = 'flex';
+}
+
+// To close the details when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('alumni-details')) {
+        document.body.classList.remove('dimmed');
+        event.target.style.display = 'none';
+    }
 });

@@ -1,23 +1,24 @@
 body {
     background-color: #e0f7fa; /* Light cyan background */
 }
-/* General layout for the alumni section */
+
 h1 {
-    text-align: left; /* Align title to the left */ 
+    text-align: left; 
     margin: 20px 5px;
     font-size: 2.5em;
-    color: #19366b; /* Color for the title */
+    color: #19366b; 
     padding-left: 15px;
 }
 
 .alumni-description {
-    text-align: left; /* Align paragraph to the left */
+    text-align: left; 
     font-size: 1.2em;
     color: #555;
     margin-bottom: 40px;
     padding-left: 15px;
     margin: 5px;
 }
+
 #alumni-section {
     display: flex;
     flex-wrap: wrap;
@@ -61,40 +62,106 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Initially hidden message box */
-.message-box {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
+/* Dimming background when card is active */
+body.dimmed {
+    background-color: rgba(224, 247, 250, 0.5);
+}
+
+/* Styles for alumni details */
+.alumni-details {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #fff;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content of the expanded card */
+.details-content {
+    background-color: #19366b;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    z-index: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 90%; 
+    max-width: 1000px; 
+    height: auto; 
 }
 
-/* Message inside the message box */
-.alumni-message {
-    padding: 20px;
-    color: #333;
-    font-size: 1em;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+.big-image {
+    width: 200px; 
+    height: auto; 
+    margin-right: 30px; 
 }
 
-/* Active state of the alumni card (when clicked) */
-.alumni-card.active .message-box {
-    height: 150px; /* Adjust the height based on the message length */
-    opacity: 1;
-    top: 100%;
+.details-text {
+    color: white;
+    font-size: 1.2em; 
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    flex-grow: 1; 
 }
 
-/* After the box expands, show the message */
-.alumni-card.active .message-box .alumni-message {
-    opacity: 1;
+.details-text p:last-child {
+    margin-top: auto; 
+}
+
+.details-text a {
+    color: white;
+}
+
+.details-text a:hover {
+    color: red;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .alumni-card {
+        width: 150px; /* Smaller card size on medium screens */
+        height: 250px; /* Adjust height */
+    }
+
+    .big-image {
+        width: 150px; /* Adjust image size */
+    }
+
+    .details-text {
+        font-size: 1em; /* Reduce font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce title size */
+    }
+
+    .alumni-description {
+        font-size: 1em; /* Reduce description size */
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-card {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Adjust height */
+    }
+
+    .details-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center content */
+    }
+
+    .big-image {
+        width: 100%; /* Full width image */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .details-text {
+        max-width: 90%; /* Adjust text width */
+    }
 }
