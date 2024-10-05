@@ -1,66 +1,66 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .collaborators {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .collaborators h2 {
-    color: #003366;
-    font-size: 200%;
-    margin-bottom: 30px; /* Add margin for spacing */
+  color: #003366;
+  font-size: 200%;
+  margin-bottom: 30px; /* Add margin for spacing */
 }
 
 .collaborator-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px 20px; /* Space between columns */
-    max-width: 1200px; /* Limit max width */
-    margin: 0 auto; /* Center the grid */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 20px; /* Space between columns */
+  max-width: 1200px; /* Limit max width */
+  margin: 0 auto; /* Center the grid */
 }
 
 .collaborator {
-    display: flex; /* Use flexbox to center logos */
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Center the link in the grid cell */
+  display: flex; /* Use flexbox to center logos */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the link in the grid cell */
 }
 
 .collaborator img {
-    max-width: 60%; /* Make logos responsive */
-    height: auto;
-    transition: transform 0.3s;
+  max-width: 60%; /* Make logos responsive */
+  height: auto;
+  transition: transform 0.3s;
 }
 
 .collaborator:hover img {
-    transform: scale(1.15); /* Zoom effect on hover */
+  transform: scale(1.15); /* Zoom effect on hover */
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-    .collaborator-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    }
+  .collaborator-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
 }
 
 @media (max-width: 800px) {
-    .collaborator-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
+  .collaborator-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
 }
 
 @media (max-width: 500px) {
-    .collaborator-grid {
-        grid-template-columns: 1fr; /* 1 column */
-    }
+  .collaborator-grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
 
-    .collaborator img {
-        max-width: 80%; /* Increase logo size on smaller screens */
-    }
+  .collaborator img {
+    max-width: 80%; /* Increase logo size on smaller screens */
+  }
 }

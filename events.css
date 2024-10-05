@@ -56,7 +56,8 @@
 }
 
 /* Arrows */
-.prev-arrow, .next-arrow {
+.prev-arrow,
+.next-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -118,7 +119,7 @@ footer p {
   h1 {
     font-size: 2em; /* Smaller title on very small screens */
   }
-  
+
   p {
     font-size: 1em; /* Smaller paragraph text */
   }

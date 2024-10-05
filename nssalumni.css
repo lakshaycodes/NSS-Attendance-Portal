@@ -1,167 +1,167 @@
 body {
-    background-color: #e0f7fa; /* Light cyan background */
+  background-color: #e0f7fa; /* Light cyan background */
 }
 
 h1 {
-    text-align: left; 
-    margin: 20px 5px;
-    font-size: 2.5em;
-    color: #19366b; 
-    padding-left: 15px;
+  text-align: left;
+  margin: 20px 5px;
+  font-size: 2.5em;
+  color: #19366b;
+  padding-left: 15px;
 }
 
 .alumni-description {
-    text-align: left; 
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 40px;
-    padding-left: 15px;
-    margin: 5px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+  margin: 5px;
 }
 
 #alumni-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 /* Basic styling for the alumni card */
 .alumni-card {
-    position: relative;
-    width: 200px;
-    height: 300px;
-    margin: 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
 }
 
 /* Image styling */
 .alumni-card img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-bottom: 2px solid #ccc;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-bottom: 2px solid #ccc;
 }
 
 .alumni-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #333;
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
 }
 
 /* Hover effect: enlarge slightly */
 .alumni-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Dimming background when card is active */
 body.dimmed {
-    background-color: rgba(224, 247, 250, 0.5);
+  background-color: rgba(224, 247, 250, 0.5);
 }
 
 /* Styles for alumni details */
 .alumni-details {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Content of the expanded card */
 .details-content {
-    background-color: #19366b;
-    border-radius: 8px;
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    width: 90%; 
-    max-width: 1000px; 
-    height: auto; 
+  background-color: #19366b;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
 }
 
 .big-image {
-    width: 200px; 
-    height: auto; 
-    margin-right: 30px; 
+  width: 200px;
+  height: auto;
+  margin-right: 30px;
 }
 
 .details-text {
-    color: white;
-    font-size: 1.2em; 
-    max-width: 500px; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    flex-grow: 1; 
+  color: white;
+  font-size: 1.2em;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .details-text p:last-child {
-    margin-top: auto; 
+  margin-top: auto;
 }
 
 .details-text a {
-    color: white;
+  color: white;
 }
 
 .details-text a:hover {
-    color: red;
+  color: red;
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .alumni-card {
-        width: 150px; /* Smaller card size on medium screens */
-        height: 250px; /* Adjust height */
-    }
+  .alumni-card {
+    width: 150px; /* Smaller card size on medium screens */
+    height: 250px; /* Adjust height */
+  }
 
-    .big-image {
-        width: 150px; /* Adjust image size */
-    }
+  .big-image {
+    width: 150px; /* Adjust image size */
+  }
 
-    .details-text {
-        font-size: 1em; /* Reduce font size for smaller screens */
-    }
+  .details-text {
+    font-size: 1em; /* Reduce font size for smaller screens */
+  }
 
-    h1 {
-        font-size: 2em; /* Reduce title size */
-    }
+  h1 {
+    font-size: 2em; /* Reduce title size */
+  }
 
-    .alumni-description {
-        font-size: 1em; /* Reduce description size */
-    }
+  .alumni-description {
+    font-size: 1em; /* Reduce description size */
+  }
 }
 
 @media (max-width: 480px) {
-    .alumni-card {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Adjust height */
-    }
+  .alumni-card {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Adjust height */
+  }
 
-    .details-content {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center content */
-    }
+  .details-content {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center content */
+  }
 
-    .big-image {
-        width: 100%; /* Full width image */
-        margin-right: 0; /* Remove margin */
-    }
+  .big-image {
+    width: 100%; /* Full width image */
+    margin-right: 0; /* Remove margin */
+  }
 
-    .details-text {
-        max-width: 90%; /* Adjust text width */
-    }
+  .details-text {
+    max-width: 90%; /* Adjust text width */
+  }
 }

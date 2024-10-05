@@ -1,62 +1,62 @@
 /* Table Styles */
 body {
-    background-color: #e0f7fa; /* Light cyan background */
+  background-color: #e0f7fa; /* Light cyan background */
 }
 
 .notice-section {
-    padding: 20px 15px; /* Adjusted padding for smaller screens */
-    background-color: #e0f7fa; /* Light cyan background */
+  padding: 20px 15px; /* Adjusted padding for smaller screens */
+  background-color: #e0f7fa; /* Light cyan background */
 }
 
 .notice-table {
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Remove space between cells */
-    margin-top: 30px; /* Space above the table */
-    background-color: #fff; /* White background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border: 1px solid #ccc; /* Light border for better visibility */
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove space between cells */
+  margin-top: 30px; /* Space above the table */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border: 1px solid #ccc; /* Light border for better visibility */
 }
 
 /* Table Header Styles */
 .notice-table th {
-    background-color: #19366b; /* Header background */
-    color: white; /* Header text color */
-    font-weight: bold; /* Bold header text */
-    font-size: 1.2rem; /* Increase font size */
-    font-family: 'Arial', sans-serif; /* Change font style */
-    text-align: left; /* Align text to the left */
-    padding: 15px; /* Padding for header cells */
+  background-color: #19366b; /* Header background */
+  color: white; /* Header text color */
+  font-weight: bold; /* Bold header text */
+  font-size: 1.2rem; /* Increase font size */
+  font-family: "Arial", sans-serif; /* Change font style */
+  text-align: left; /* Align text to the left */
+  padding: 15px; /* Padding for header cells */
 }
 
 .notice-table td {
-    padding: 15px; /* Padding for cells */
-    text-align: left; /* Align text to the left */
-    border-bottom: 1px solid #ddd; /* Light border for rows */
+  padding: 15px; /* Padding for cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #ddd; /* Light border for rows */
 }
 
 .notice-table tr:hover {
-    background-color: #f5f5f5; /* Hover effect for rows */
+  background-color: #f5f5f5; /* Hover effect for rows */
 }
 
 .notice-link {
-    color: #19366b; /* Link color */
-    font-weight: bold; /* Bold link text */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease-in-out; /* Transition for color change */
+  color: #19366b; /* Link color */
+  font-weight: bold; /* Bold link text */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease-in-out; /* Transition for color change */
 }
 
 .notice-link:hover {
-    color: red; /* Change color on hover */
+  color: red; /* Change color on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .notice-table {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-    }
+  .notice-table {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
 
-    .notice-table th, 
-    .notice-table td {
-        padding: 10px; /* Reduced padding for smaller screens */
-    }
+  .notice-table th,
+  .notice-table td {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
 }
