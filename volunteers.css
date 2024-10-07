@@ -117,12 +117,12 @@ h1 {
 }
 
 .card-front h3 {
-  color: red;
+  color: #19366b;
   font-size: 1.2em;
   margin: 5px 0;
 }
 .card-back h3 {
-  color: red;
+  color: #19366b;
 }
 .card a {
   color: black; /* Set link color */
