@@ -106,9 +106,9 @@ h1 {
 }
 .card img {
   border-radius: 50%;
-  height: 180px; /* Adjust image size */
-  width: 180px; /* Adjust image size */
-  margin: 15px 0; /* Space around the image */
+  height: 190px; /* Adjust image size */
+  width: 190px; /* Adjust image size */
+  margin: 8px 0; /* Space around the image */
 }
 
 .card h2 {

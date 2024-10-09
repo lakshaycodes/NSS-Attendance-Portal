@@ -127,14 +127,13 @@
 
 /* For small mobile devices */
 @media (max-width: 480px) {
-  .footer {
-    padding: 15px 5px;
-  }
-
   .social-icon {
     width: 25px;
   }
-
+  .social-media-text
+  {
+    font-size: medium;
+  }
   .links {
     flex-direction: column;
   }
