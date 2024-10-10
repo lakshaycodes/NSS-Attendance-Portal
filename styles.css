@@ -18,7 +18,26 @@ body {
   position: relative;
   height: 400px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.banner-image {
+  width: 100%; /* Full width for responsiveness */
+  height: 100%; /* Ensure it fills the banner section */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+/* Banner Text */
+.banner-text {
+  position: absolute;
+  text-align: center;
+  color: rgb(207, 0, 0);
+  font-size: 24px;
+  animation: fadeIn 2s ease-in-out;
+}
+
 
 /* Notice Bar Section */
 .notice-bar {
@@ -332,6 +351,17 @@ body {
 .view-all-events-button:hover {
   background-color: #1565c0; /* Darker shade on hover */
 }
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -344,12 +374,45 @@ body {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Adjust banner height for tablet screens */
+  }
+
+  .banner-text {
+    font-size: 18px; /* Smaller text size for tablet */
+  }
+
   .message-cards {
     padding: 20px; /* Adjust padding for smaller screens */
   }
 
   .card-img {
-    width: 50px; /* Adjust size for smaller screens */
-    height: 50px; /* Adjust size for smaller screens */
+    width: 50px; /* Adjust image size for smaller screens */
+    height: 50px;
+  }
+}
+
+/* Optimize for screens with max-width 420px */
+@media (max-width: 420px) {
+  .banner {
+    height: 200px; /* Reduce banner height for mobile phones */
+  }
+
+  .banner-image {
+    object-fit: contain; /* Prevents the image from cutting off */
+  }
+
+  .banner-text {
+    font-size: 14px; /* Even smaller text for mobile */
+    padding: 10px; /* Add some padding for text readability */
+  }
+
+  .message-cards {
+    padding: 10px; /* Further reduce padding on smaller screens */
+  }
+
+  .card-img {
+    width: 40px; /* Smaller images for mobile */
+    height: 40px;
   }
 }

@@ -86,11 +86,10 @@ body.dimmed {
   background-color: #19366b;
   border-radius: 8px;
   padding: 30px;
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  max-width: 1000px;
+  /* width: 90%; */
+  /* max-width: 1000px; */
   height: auto;
+
 }
 
 .big-image {
