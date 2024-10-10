@@ -373,12 +373,27 @@ body {
 }
 
 /* Responsive Styles */
+@media (max-width: 1038px){
+  .view-all-btn{
+    width: 115px;
+  }
+}
+@media (max-width: 861px){
+  .view-all-btn{
+    width: 120px;
+  }
+}
+
 @media (max-width: 768px) {
   .banner {
     height: 300px; /* Adjust banner height for tablet screens */
   }
-
-  
+  .view-all-btn{
+    width: 130px;
+  }
+  .welcome-message{
+    font-size: small;
+  }
 
   .message-cards {
     padding: 20px; /* Adjust padding for smaller screens */
@@ -389,7 +404,17 @@ body {
     height: 50px;
   }
 }
-
+@media (max-width: 582px){
+  .view-all-btn{
+    width: 133px;
+  }
+}
+@media (max-width: 552px){
+  .view-all-btn{
+    width: 127px;
+    font-size: medium;
+  }
+}
 /* Optimize for screens with max-width 420px */
 @media (max-width: 420px) {
   .banner {
@@ -418,9 +443,16 @@ body {
   }
   .view-all-btn{
     font-size: x-small;
-    padding: 3px;
+    padding: 5px;
+    width: 65px;
   }
   .notice-scroll{
     font-size: smaller;
+  }
+}
+@media (max-width: 350px){
+  .view-all-btn{
+    font-size: x-small;
+    width: 70px;
   }
 }
