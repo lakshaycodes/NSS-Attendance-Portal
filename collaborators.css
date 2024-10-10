@@ -12,7 +12,7 @@ h1 {
   margin: 20px 0;
   font-size: 2.5em;
   color: #19366b; /* Color for the title */
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 
 .collaborators-description {
@@ -20,11 +20,11 @@ h1 {
   font-size: 1.2em;
   color: #555;
   margin-bottom: 40px;
-  padding-left: 15px;
+  /* padding-left: 15px; */
 }
 .collaborators {
   text-align: center;
-  padding: 50px 20px;
+  padding: 10px 20px;
 }
 
 .collaborators h2 {
@@ -67,16 +67,30 @@ h1 {
 
 @media (max-width: 800px) {
   .collaborator-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+  }
+  h1{
+    font-size: 1.8rem;
+    margin: 10px;
+  }
+  .collaborators-description{
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 500px) {
   .collaborator-grid {
-    grid-template-columns: 1fr; /* 1 column */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
 
   .collaborator img {
     max-width: 80%; /* Increase logo size on smaller screens */
+  }
+  h1{
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+  .collaborators-description{
+    font-size: 0.9rem;
   }
 }

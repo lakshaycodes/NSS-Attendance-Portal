@@ -52,7 +52,7 @@ body {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .notice-table {
-    font-size: 0.9rem; /* Smaller font size for mobile */
+    font-size: 0.8rem; /* Smaller font size for mobile */
   }
 
   .notice-table th,
