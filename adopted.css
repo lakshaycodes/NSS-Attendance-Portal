@@ -29,6 +29,11 @@ body {
 }
 
 /* Make the village block responsive */
+@media(max-width:1025px){
+  footer p{
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .village {
     width: calc(45% - 20px); /* 2 cards per row on medium screens */

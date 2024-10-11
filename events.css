@@ -115,6 +115,11 @@ footer p {
 }
 
 /* Additional responsive styles */
+@media(max-width:1025px){
+  footer p{
+    text-align: center;
+  }
+}
 @media (max-width: 480px) {
   h1 {
     font-size: 2em; /* Smaller title on very small screens */

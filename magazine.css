@@ -69,6 +69,11 @@ footer p {
 }
 
 /* Responsive adjustments */
+@media(max-width:1025px){
+  footer p{
+    text-align: center;
+  }
+}
 @media (max-width: 800px) {
   .card {
     width: calc(45% - 20px); /* 2 cards in a row */
@@ -78,5 +83,8 @@ footer p {
 @media (max-width: 500px) {
   .card {
     width: calc(100% - 20px); /* 1 card in a row */
+  }
+  footer p{
+    text-align: center;
   }
 }
