@@ -399,11 +399,26 @@ body {
     padding: 20px; /* Adjust padding for smaller screens */
   }
 
+  
+  .card-content {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
   .card-img {
-    width: 50px; /* Adjust image size for smaller screens */
-    height: 50px;
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 15px; /* Add space below the image */
   }
 }
+@media(max-width: 680px){
+  .recent-events-header h1{
+    font-size: large;
+  }
+  .recent-events-header a{
+    padding:8px;
+  }
+}
+
 @media (max-width: 582px){
   .view-all-btn{
     width: 133px;
@@ -415,25 +430,24 @@ body {
     font-size: medium;
   }
 }
+@media (max-width:500px){
+  .message-text h3{
+    font-size: medium;
+  }
+  .message-text p{
+    font-size: smaller;
+  }
+}
 /* Optimize for screens with max-width 420px */
 @media (max-width: 420px) {
   .banner {
     height: 124px; /* Reduce banner height for mobile phones */
   }
-
   .banner-image {
     object-fit: contain; /* Prevents the image from cutting off */
   }
-
-
-
   .message-cards {
     padding: 10px; /* Further reduce padding on smaller screens */
-  }
-
-  .card-img {
-    width: 40px; /* Smaller images for mobile */
-    height: 40px;
   }
   .welcome-message{
     font-size: xx-small;
