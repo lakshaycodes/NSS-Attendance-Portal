@@ -202,3 +202,5 @@ body.dimmed {
   transform: translateY(-30px) scale(0.8); /* Initial state: slightly smaller and offset */
   animation: slideInFadeScale 0.6s ease-out forwards; /* Apply the new combined animation */
 }
+
+/* kjnjnk */
