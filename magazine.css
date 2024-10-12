@@ -79,7 +79,14 @@ footer p {
     width: calc(45% - 20px); /* 2 cards in a row */
   }
 }
-
+@media (max-width: 768px){
+  h1{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1em;
+  }
+}
 @media (max-width: 500px) {
   .card {
     width: calc(100% - 20px); /* 1 card in a row */
