@@ -1,33 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButtons = document.querySelectorAll('.dropbtn'); // Select all dropdown buttons
+    // Toggle mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    
+    menuToggle.addEventListener('click', function() {
+        navList.classList.toggle('show');
+    });
 
-    // Toggle dropdown on button click
+    // Toggle dropdown on button click for small screens
+    const dropdownButtons = document.querySelectorAll('.dropbtn');
+    
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function(event) {
-            event.stopPropagation(); // Prevent event from bubbling up
-            const dropdownContent = this.nextElementSibling; // Get the next sibling (dropdown content)
-            dropdownContent.classList.toggle('show'); // Toggle dropdown visibility
+            event.stopPropagation();
+            const dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle('show');
         });
     });
 
-    // Close the dropdown if clicking outside
+    // Close dropdown if clicking outside
     window.addEventListener('click', function(event) {
         dropdownButtons.forEach(button => {
-            const dropdownContent = button.nextElementSibling; // Get the dropdown content
+            const dropdownContent = button.nextElementSibling;
             if (dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show'); // Close dropdown
+                dropdownContent.classList.remove('show');
             }
         });
     });
 });
 
-// Add Animation to nav items on hover
-document.querySelectorAll('.nav-list a').forEach(link => { // Changed selector to target nav links
+// Add scale animation on hover
+document.querySelectorAll('.nav-list a').forEach(link => {
     link.addEventListener('mouseover', () => {
         link.style.transform = "scale(1.1)";
         link.style.transition = "transform 0.3s ease";
     });
-    
+
     link.addEventListener('mouseout', () => {
         link.style.transform = "scale(1)";
     });

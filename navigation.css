@@ -49,6 +49,7 @@ header {
     position: relative;
 }
 
+/* Dropdown content shared for all sizes */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -57,33 +58,17 @@ header {
     z-index: 1;
     min-width: 160px;
     left: 0; /* Align to the left of the dropdown */
-}
-
-.dropdown-content {
-    display: none; /* Initially hidden */
+    padding: 0;
 }
 
 .dropdown-content.show {
-    display: block; /* Display when the 'show' class is added */
-}
-
-
-/* Adjust for visibility on different screen sizes */
-@media (max-width: 720px) {
-    .dropdown-content {
-        position: fixed; /* Keep it within viewport */
-        left: 0; /* Align to the left of the viewport */
-        right: 0; /* Align to the right of the viewport */
-        top: 60px; /* Adjust this value to position it below the header */
-        max-height: 200px; /* Set a max height for dropdown */
-        overflow: auto; /* Allow scrolling if content exceeds height */
-    }
+    display: block; /* Show the dropdown */
 }
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
-    display: block;
+    display: flex;
     text-align: left;
     transition: background-color 0.3s ease;
 }
@@ -99,10 +84,10 @@ header {
 
 /* Media Queries for Screen Sizes */
 
-/* For screens greater than 1200px, show nav1 */
+/* Default for screens above 1200px */
 @media (min-width: 1201px) {
     .nav2, .nav3, .nav4 {
-        display: none; /* Hide nav2, nav3, nav4 */
+        display: none; /* Hide other navs */
     }
 
     .nav1 {
@@ -130,6 +115,10 @@ header {
     .nav3 {
         display: flex; /* Show nav3 */
     }
+
+    .dropdown-content {
+        left: auto; /* Adjust positioning to make sure dropdown fits well */
+    }
 }
 
 /* For screens less than 420px, show nav4 */
@@ -140,5 +129,15 @@ header {
 
     .nav4 {
         display: flex; /* Show nav4 */
+    }
+
+    /* Dropdown adjustments for mobile */
+    .dropdown-content {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 60px; /* Adjust position below the header */
+        max-height: 200px; /* Limit dropdown height */
+        overflow: auto; /* Enable scrolling */
     }
 }
