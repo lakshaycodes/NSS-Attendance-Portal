@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT CELL</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navigation.css" /> <!-- Link to your navigation CSS -->
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header"></div> 
     <!-- Placeholder for the header -->
+
+    <!-- Navigation Section -->
+    <div id="navigation"></div>
+    <!-- Placeholder for the navigation -->
 
     <main>
       <!-- Banner Section -->
@@ -89,7 +94,7 @@
                 class="card-img"
               />
               <div class="message-text">
-                <h3>Message from the Prof Anand Srivastava (Vice Chancellor)</h3>
+                <h3>Message from the Vice Chancellor (Prof. Anand Srivastava)</h3>
                 <p>
                   It is with great pride that I greet all members and supporters
                   of the National Service Scheme (NSS) at Netaji Subhas
@@ -116,7 +121,7 @@
                 class="card-img"
               />
               <div class="message-text">
-                <h3>Message from the Dr. Praveen Saroha (Program Coordinator)</h3>
+                <h3>Message from the Program Coordinator (Dr. Praveen Saroha)</h3>
                 <p>
                   Welcome to the NSS NSUT Cell! It is an honor to serve as your
                   Program Coordinator and work with such passionate individuals
@@ -142,7 +147,7 @@
                 class="card-img"
               />
               <div class="message-text">
-                <h3>Message from the Mr. Anuj (Founding President)</h3>
+                <h3>Message from the Founding President (Mr. Anuj)</h3>
                 <p>
                   As the Founding President of NSS NSUT Cell, I am filled with
                   pride witnessing the remarkable journey we've shared. From our
@@ -169,7 +174,7 @@
                 class="card-img"
               />
               <div class="message-text">
-                <h3>Message from the Raman Yadav (President)</h3>
+                <h3>Message from the President (Raman Yadav)</h3>
                 <p>
                   It is an honor to serve as the President of NSS NSUT Cell,
                   witnessing the dedication and enthusiasm of our members. NSS
@@ -354,5 +359,23 @@
 
     <script src="header-footer.js"></script>
     <script src="index.js"></script>
+
+    <script src="navigation.js"></script> <!-- Include your navigation JavaScript file -->
+    
+    <script>
+      // Function to load the navigation HTML
+      function loadNavigation() {
+        const navDiv = document.getElementById('navigation');
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(data => {
+            navDiv.innerHTML = data; // Insert the fetched HTML into the navigation div
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+      }
+
+      // Call the function to load the navigation
+      loadNavigation();
+    </script>
   </body>
 </html>

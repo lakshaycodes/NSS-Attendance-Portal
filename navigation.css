@@ -1,3 +1,4 @@
+/* General reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,135 +10,162 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
+header#main-header {
+    background-color: #19366b; /* Dark blue background for header */
     padding: 10px 0;
+    position: relative; /* Required for the pseudo-element */
 }
 
-.nav-container {
+/* Red Line Under Header */
+header#main-header::after {
+    content: "";
+    display: block;
+    height: 3px; /* Height of the red line */
+    background-color: red; /* Red line color */
+    width: 100%; /* Full width of the header */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the header */
+    left: 0; /* Align to the left */
+}
+
+/* Container styling */
+#container-large,
+#container-medium,
+#container-small,
+#container-extra-small {
     max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
-.nav-list {
+/* List styling */
+#list-large,
+#list-medium,
+#list-small,
+#list-extra-small {
     list-style-type: none;
     display: flex;
     align-items: center;
     flex-wrap: wrap; /* Allows wrapping of items */
 }
 
-.nav-list li {
+/* List item styling */
+#list-large li,
+#list-medium li,
+#list-small li,
+#list-extra-small li {
     position: relative;
     margin: 0 15px;
 }
 
-.nav-list a {
-    color: white;
+/* Links styling */
+.nav-link {
+    color: white; /* White text color */
     text-decoration: none;
     padding: 10px 15px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for background and text color */
 }
 
-.nav-list a:hover {
-    background-color: #575757;
+.nav-link:hover {
+    background-color: red; /* Red background on hover */
     border-radius: 4px;
 }
 
+/* Dropdown styling */
 .dropdown {
     position: relative;
 }
 
-/* Dropdown content shared for all sizes */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #19366b; /* Dark blue background for dropdown */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 160px;
-    left: 0; /* Align to the left of the dropdown */
+    left: 0; /* Align to the left */
     padding: 0;
+    white-space: nowrap; /* Prevent the dropdown content from breaking into multiple lines */
 }
 
 .dropdown-content.show {
     display: block; /* Show the dropdown */
 }
 
+/* Adjust dropdown to avoid going off-screen */
+.dropdown-content {
+    right: auto;
+    left: auto;
+}
+
 .dropdown-content a {
-    color: white;
+    color: white; /* White text color for dropdown links */
     padding: 12px 16px;
-    display: flex;
+    display: block;
     text-align: left;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .dropdown-content a:hover {
-    background-color: #575757;
+    background-color: red; /* Red background on dropdown link hover */
 }
 
-/* Show dropdown on hover */
+/* Dropdown hover effect */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Show dropdown on hover */
 }
 
-/* Media Queries for Screen Sizes */
+/* Media Queries for different screen sizes */
 
 /* Default for screens above 1200px */
 @media (min-width: 1201px) {
-    .nav2, .nav3, .nav4 {
+    #nav-medium,
+    #nav-small,
+    #nav-extra-small {
         display: none; /* Hide other navs */
     }
 
-    .nav1 {
+    #nav-large {
         display: flex; /* Show nav1 */
     }
 }
 
 /* For screens between 720px and 1200px, show nav2 */
 @media (min-width: 720px) and (max-width: 1200px) {
-    .nav1, .nav3, .nav4 {
+    #nav-large,
+    #nav-small,
+    #nav-extra-small {
         display: none; /* Hide nav1, nav3, nav4 */
     }
 
-    .nav2 {
+    #nav-medium {
         display: flex; /* Show nav2 */
     }
 }
 
 /* For screens between 420px and 720px, show nav3 */
 @media (min-width: 420px) and (max-width: 720px) {
-    .nav1, .nav2, .nav4 {
+    #nav-large,
+    #nav-medium,
+    #nav-extra-small {
         display: none; /* Hide nav1, nav2, nav4 */
     }
 
-    .nav3 {
+    #nav-small {
         display: flex; /* Show nav3 */
-    }
-
-    .dropdown-content {
-        left: auto; /* Adjust positioning to make sure dropdown fits well */
     }
 }
 
 /* For screens less than 420px, show nav4 */
 @media (max-width: 420px) {
-    .nav1, .nav2, .nav3 {
+    #nav-large,
+    #nav-medium,
+    #nav-small {
         display: none; /* Hide nav1, nav2, nav3 */
     }
 
-    .nav4 {
+    #nav-extra-small {
         display: flex; /* Show nav4 */
-    }
-
-    /* Dropdown adjustments for mobile */
-    .dropdown-content {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 60px; /* Adjust position below the header */
-        max-height: 200px; /* Limit dropdown height */
-        overflow: auto; /* Enable scrolling */
     }
 }

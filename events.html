@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT - Events</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /> 
     <link rel="stylesheet" href="events.css" />
+    <link rel="stylesheet" href="navigation.css" /> <!-- Link to your navigation CSS -->
   </head>
   <body>
     <!-- Header Section -->
     <div id="header"></div>
     <!-- Placeholder for the header -->
+
+    <!-- Navigation Section -->
+    <div id="navigation"></div>
+    <!-- Placeholder for the navigation -->
 
     <main>
       <section class="events-section">
@@ -1027,5 +1032,22 @@
     <!-- Include the JS file for header and footer -->
     <script src="events.js"></script>
     <!-- Include the JS file for dynamic events -->
+    <script src="navigation.js"></script> <!-- Include your navigation JavaScript file -->
+    
+    <script>
+      // Function to load the navigation HTML
+      function loadNavigation() {
+        const navDiv = document.getElementById('navigation');
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(data => {
+            navDiv.innerHTML = data; // Insert the fetched HTML into the navigation div
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+      }
+
+      // Call the function to load the navigation
+      loadNavigation();
+    </script>
   </body>
 </html>

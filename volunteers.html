@@ -6,15 +6,20 @@
     <title>NSS NSUT - POR's</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="volunteers.css" />
+    <link rel="stylesheet" href="navigation.css" /> <!-- Link to your navigation CSS -->
   </head>
   <body>
     <!-- Header Section -->
     <div id="header"></div>
     <!-- Placeholder for the header -->
 
+    <!-- Navigation Section -->
+    <div id="navigation"></div>
+    <!-- Placeholder for the navigation -->
+
     <main>
       <section class="por-section">
-        <h1>OFFICE BEARERS</h1>
+        <h1>OFFICE BEARERS</h1> 
         <!-- <p class="por-description">The NSS NSUT core team is dedicated to fostering community service and social responsibility among students. Comprising passionate individuals, the team organizes impactful initiatives, empowering volunteers to engage in various social causes. Together, we strive to create positive change, promote awareness, and build a culture of compassion and collaboration within the campus.</p> -->
         <div class="card-container">
           <div class="card" onclick="toggleCard(this)">
@@ -885,5 +890,22 @@
     </script>
 
     <!-- Include the JS file -->
+    <script src="navigation.js"></script> <!-- Include your navigation JavaScript file -->
+    
+    <script>
+      // Function to load the navigation HTML
+      function loadNavigation() {
+        const navDiv = document.getElementById('navigation');
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(data => {
+            navDiv.innerHTML = data; // Insert the fetched HTML into the navigation div
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+      }
+
+      // Call the function to load the navigation
+      loadNavigation();
+    </script>
   </body>
 </html>

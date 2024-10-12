@@ -6,10 +6,16 @@
     <title>NSS- NSUT Join Us</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="joinus.css">
-</head>
+    <link rel="stylesheet" href="navigation.css" /> <!-- Link to your navigation CSS -->
+</head> 
 <body>
     <!-- Header Section -->
     <div id="header"></div> <!-- Placeholder for the header -->
+
+    <!-- Navigation Section -->
+    <div id="navigation"></div>
+    <!-- Placeholder for the navigation -->
+
     <main>
         <section class="join-us-section">
             <section>
@@ -60,6 +66,23 @@
     <div id="footer"></div> <!-- Placeholder for the footer -->
 
     <script src="header-footer.js"></script> <!-- Include the JS file -->
+    <script src="navigation.js"></script> <!-- Include your navigation JavaScript file -->
+    
+    <script>
+      // Function to load the navigation HTML
+      function loadNavigation() {
+        const navDiv = document.getElementById('navigation');
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(data => {
+            navDiv.innerHTML = data; // Insert the fetched HTML into the navigation div
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+      }
+
+      // Call the function to load the navigation
+      loadNavigation();
+    </script>
     
 </body>
 </html>

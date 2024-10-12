@@ -14,83 +14,9 @@
     <div id="header"></div>
     <!-- Placeholder for the header -->
 
-    <!-- Navigation Bar -->
-        <nav class="nav1">
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="notices.html">Notice</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="magazine.html">Magazine</a></li>
-                    <li><a href="adopted.html">Adopted Villages</a></li>
-                    <li><a href="volunteers.html">Volunteers</a></li>
-                    <li><a href="nssalumni.html">Alumni</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                </ul>
-            </div>                
-        </nav>
-        <nav class="nav2">
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="notices.html">Notice</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="magazine.html">Magazine</a></li>
-                    <li><a href="adopted.html">Adopted Villages</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn">More <i class="arrow-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="volunteers.html">Volunteers</a>
-                            <a href="nssalumni.html">Alumni</a>
-                            <a href="achievements.html">Achievements</a>
-                            <a href="aboutus.html">About Us</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>                
-        </nav>
-        <nav class="nav3">
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="notices.html">Notice</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn">More <i class="arrow-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="magazine.html">Magazine</a>
-                            <a href="adopted.html">Adopted Villages</a>
-                            <a href="volunteers.html">Volunteers</a>
-                            <a href="nssalumni.html">Alumni</a>
-                            <a href="achievements.html">Achievements</a>
-                            <a href="aboutus.html">About Us</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>                
-        </nav>
-        <nav class="nav4">
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="notices.html">Notice</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn">More <i class="arrow-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="events.html">Events</a>
-                            <a href="magazine.html">Magazine</a>
-                            <a href="adopted.html">Adopted Villages</a>
-                            <a href="volunteers.html">Volunteers</a>
-                            <a href="nssalumni.html">Alumni</a>
-                            <a href="achievements.html">Achievements</a>
-                            <a href="aboutus.html">About Us</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>                
-        </nav>
-    </header>
+    <!-- Navigation Section -->
+    <div id="navigation"></div>
+    <!-- Placeholder for the navigation -->
 
     <main>
       <div class="coming-soon-container">
@@ -103,5 +29,21 @@
 
     <script src="header-footer.js"></script>
     <script src="navigation.js"></script> <!-- Include your navigation JavaScript file -->
+    
+    <script>
+      // Function to load the navigation HTML
+      function loadNavigation() {
+        const navDiv = document.getElementById('navigation');
+        fetch('navigation.html')
+          .then(response => response.text())
+          .then(data => {
+            navDiv.innerHTML = data; // Insert the fetched HTML into the navigation div
+          })
+          .catch(error => console.error('Error loading navigation:', error));
+      }
+
+      // Call the function to load the navigation
+      loadNavigation();
+    </script>
   </body>
 </html>

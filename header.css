@@ -48,64 +48,6 @@
   width: 180px;
   padding: 10px;
 }
-/* Navigation Bar */
-.navbar {
-  background-color: #19366b; /* Navbar background color */
-  padding: 0px; /* Padding around the navbar */
-  width: 100%; /* Full width */
-  text-align: center; /* Center align text */
-}
-
-.navbar ul {
-  list-style: none; /* Remove bullet points */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  gap: 20px; /* Space between navbar items */
-}
-
-.navbar ul li {
-  position: relative; /* Positioning for child elements */
-}
-
-/* Style for links */
-.navbar ul li a {
-  color: white; /* Text color */
-  font-weight: bold; /* Make text bold */
-  text-decoration: none; /* Remove underline from links */
-  font-size: 1rem; /* Font size */
-  padding: 10px; /* Padding inside the link */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color */
-  display: block; /* Make the link a block element to cover the entire li */
-}
-
-/* Active and hover state for the entire block */
-.navbar ul li:hover {
-  background-color: red; /* Background color for the whole block on hover */
-}
-
-.navbar ul li a.active {
-  background-color: red; /* Background color when link is active */
-  color: white; /* Text color for active link */
-}
-
-/* Maintain text color on hover */
-.navbar ul li:hover a {
-  color: white; /* Keep text color white on hover */
-}
-
-/* Red Line Under Header */
-.header::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background-color: red; /* Red line below the header */
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 
 /* RESPONSIVE DESIGN */
 
@@ -120,14 +62,6 @@
     width: 160px; /* Adjust secondary logos for smaller screens */
   }
 
-  .navbar ul {
-    gap: 15px; /* Reduce space between navbar items */
-  }
-
-  .navbar ul li a {
-    font-size: 0.9rem; /* Slightly smaller font for tablet screens */
-    padding: 8px;
-  }
 }
 
 /* For screens up to 768px (mobile) */
@@ -158,26 +92,6 @@
     width: auto; /* Maintain aspect ratio */
   }
 
-  .navbar {
-    padding: 5px; /* Reduce padding for the navbar */
-  }
-
-  .navbar ul {
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items */
-    gap: 5px; /* Adjust space between items */
-  }
-
-  .navbar ul li {
-    flex: 0 0 calc(33.33% - 5px); /* Set each link to take one-third of the width */
-    margin: 0; /* Remove margin for cleaner layout */
-  }
-
-  .navbar ul li a {
-    font-size: 0.6rem; /* Smaller font for mobile */
-    padding: 2px; /* Smaller padding for links */
-    text-align: center; /* Center the text */
-  }
 }
 
 /* For screens up to 480px (small mobile devices) */
@@ -199,14 +113,6 @@
     width: auto; /* Maintain aspect ratio */
   }
 
-  .navbar {
-    padding: 3px; /* Further reduce padding for small devices */
-  }
-
-  .navbar ul li a {
-    font-size: 0.5rem; /* Even smaller font for small mobile */
-    padding: 1px; /* Smaller padding for links */
-  }
 }
 @media(max-width: 350px) {
   .logos img {
