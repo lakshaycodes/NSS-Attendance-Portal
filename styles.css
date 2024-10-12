@@ -442,11 +442,9 @@ body {
 /* Optimize for screens with max-width 420px */
 @media (max-width: 420px) {
   .banner {
-    height: 124px; /* Reduce banner height for mobile phones */
+    height: 138px; /* Reduce banner height for mobile phones */
   }
-  .banner-image {
-    object-fit: contain; /* Prevents the image from cutting off */
-  }
+  
   .message-cards {
     padding: 10px; /* Further reduce padding on smaller screens */
   }
