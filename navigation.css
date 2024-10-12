@@ -59,6 +59,15 @@ header {
     left: 0; /* Align to the left of the dropdown */
 }
 
+.dropdown-content {
+    display: none; /* Initially hidden */
+}
+
+.dropdown-content.show {
+    display: block; /* Display when the 'show' class is added */
+}
+
+
 /* Adjust for visibility on different screen sizes */
 @media (max-width: 720px) {
     .dropdown-content {
