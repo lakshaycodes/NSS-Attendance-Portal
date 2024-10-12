@@ -208,3 +208,14 @@
     padding: 1px; /* Smaller padding for links */
   }
 }
+@media(max-width: 350px) {
+  .logos img {
+    display: none; /* Hide all logos by default */
+  }
+  .nss-logo img,
+  .nsut-logo img{
+    display: block; /* Show only NSS and NSUT logos */
+    width: 60px; /* Even smaller width for small mobile logos */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
