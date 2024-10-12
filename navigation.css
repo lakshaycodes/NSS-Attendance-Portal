@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping of items */
+}
+
+.nav-list li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    left: 0; /* Align to the left of the dropdown */
+}
+
+/* Adjust for visibility on different screen sizes */
+@media (max-width: 720px) {
+    .dropdown-content {
+        position: fixed; /* Keep it within viewport */
+        left: 0; /* Align to the left of the viewport */
+        right: 0; /* Align to the right of the viewport */
+        top: 60px; /* Adjust this value to position it below the header */
+        max-height: 200px; /* Set a max height for dropdown */
+        overflow: auto; /* Allow scrolling if content exceeds height */
+    }
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Media Queries for Screen Sizes */
+
+/* For screens greater than 1200px, show nav1 */
+@media (min-width: 1201px) {
+    .nav2, .nav3, .nav4 {
+        display: none; /* Hide nav2, nav3, nav4 */
+    }
+
+    .nav1 {
+        display: flex; /* Show nav1 */
+    }
+}
+
+/* For screens between 720px and 1200px, show nav2 */
+@media (min-width: 720px) and (max-width: 1200px) {
+    .nav1, .nav3, .nav4 {
+        display: none; /* Hide nav1, nav3, nav4 */
+    }
+
+    .nav2 {
+        display: flex; /* Show nav2 */
+    }
+}
+
+/* For screens between 420px and 720px, show nav3 */
+@media (min-width: 420px) and (max-width: 720px) {
+    .nav1, .nav2, .nav4 {
+        display: none; /* Hide nav1, nav2, nav4 */
+    }
+
+    .nav3 {
+        display: flex; /* Show nav3 */
+    }
+}
+
+/* For screens less than 420px, show nav4 */
+@media (max-width: 420px) {
+    .nav1, .nav2, .nav3 {
+        display: none; /* Hide nav1, nav2, nav3 */
+    }
+
+    .nav4 {
+        display: flex; /* Show nav4 */
+    }
+}
