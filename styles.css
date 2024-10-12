@@ -439,6 +439,11 @@ body {
     font-size: smaller;
   }
 }
+@media (max-width: 490px){
+  .banner{
+    height: 120px;
+  }
+}
 /* Optimize for screens with max-width 420px */
 @media (max-width: 420px) {
   .banner {
