@@ -6,7 +6,9 @@ body {
   padding: 0;
 }
 
-
+.collaborators{
+  background-color: #e0f7fa;
+}
 h1 {
   text-align: left; /* Align title to the left */
   margin: 20px 0;
