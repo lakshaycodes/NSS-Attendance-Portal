@@ -56,7 +56,7 @@ h1 {
   padding-left: 15px;
 }
 
-p {
+.mag p {
   text-align: left; /* Align paragraph to the left */
   font-size: 1.2em;
   color: #555;
