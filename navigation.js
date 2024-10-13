@@ -47,19 +47,28 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Adjust dropdown position based on viewport
+// Adjust dropdown position based on viewport to prevent overflow
 document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('mouseenter', function () {
         const dropdownContent = this.querySelector('.dropdown-content');
         const rect = dropdownContent.getBoundingClientRect();
-        const offsetRight = window.innerWidth - rect.right;
+        const viewportWidth = window.innerWidth; // Get the width of the viewport
 
-        // Check if there's not enough space on the right side
-        if (offsetRight < 0) {
+        // Check if the dropdown overflows to the right
+        if (rect.right > viewportWidth) {
             dropdownContent.style.left = 'auto';
-            dropdownContent.style.right = '0'; // Align to the right if it overflows
+            dropdownContent.style.right = '0'; // Align dropdown to the right if it overflows
         } else {
-            dropdownContent.style.left = '0'; // Default align to the left
+            dropdownContent.style.left = '0'; // Default align to the left if no overflow
+            dropdownContent.style.right = 'auto'; // Reset right positioning
+        }
+
+        // Check if the dropdown overflows to the bottom
+        const viewportHeight = window.innerHeight;
+        if (rect.bottom > viewportHeight) {
+            dropdownContent.style.top = `-${rect.height}px`; // Move dropdown up if it overflows at the bottom
+        } else {
+            dropdownContent.style.top = ''; // Reset top positioning
         }
 
         dropdownContent.classList.add('show'); // Show the dropdown
@@ -70,4 +79,7 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
         dropdownContent.classList.remove('show'); // Hide the dropdown
     });
 });
+
+
+
 

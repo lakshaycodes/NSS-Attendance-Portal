@@ -18,21 +18,6 @@ function loadContent(section, url) {
     });
 }
 
-// Highlight the active tab based on the current URL
-function highlightActiveTab() {
-  const currentPage = window.location.pathname.split("/").pop();
-  const navLinks = document.querySelectorAll(".navbar a");
-
-  navLinks.forEach((link) => {
-    // Compare currentPage with the last segment of the link's href
-    const linkPage = link.getAttribute("href").split("/").pop();
-
-    if (linkPage === currentPage) {
-      link.classList.add("active");
-    }
-  });
-}
-
 // Load the header and footer
 loadContent("header", "header.html");
 loadContent("footer", "footer.html");

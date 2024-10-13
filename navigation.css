@@ -12,7 +12,7 @@ body {
 
 header#main-header {
     background-color: #19366b; /* Dark blue background for header */
-    padding: 10px 0;
+    padding: 0px;
     position: relative; /* Required for the pseudo-element */
 }
 
@@ -33,10 +33,13 @@ header#main-header::after {
 #container-medium,
 #container-small,
 #container-extra-small {
-    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: center;
+    background-color: #19366b; /* Navbar background color */
+    padding: 0px; /* Padding around the navbar */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
 }
 
 /* List styling */
@@ -44,10 +47,12 @@ header#main-header::after {
 #list-medium,
 #list-small,
 #list-extra-small {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping of items */
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    gap: 20px; /* Space between navbar items */
 }
 
 /* List item styling */
@@ -56,15 +61,17 @@ header#main-header::after {
 #list-small li,
 #list-extra-small li {
     position: relative;
-    margin: 0 15px;
 }
 
 /* Links styling */
 .nav-link {
-    color: white; /* White text color */
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for background and text color */
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1rem; /* Font size */
+    padding: 10px; /* Padding inside the link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color */
+    display: block; /* Make the link a block element to cover the entire li */
 }
 
 .nav-link:hover {
@@ -86,20 +93,24 @@ header#main-header::after {
 /* Dropdown styling */
 .dropdown {
     position: relative;
+    padding-top: 8px;
 }
 
+/* Dropdown content styling */
 .dropdown-content {
     display: none;
-    position: absolute;
+    position:absolute;
     background-color: #19366b; /* Dark blue background for dropdown */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 160px;
-    left: 0; /* Align to the left */
+    left: 0; /* Default alignment to the left */
     padding: 0;
-    white-space: nowrap; /* Prevent the dropdown content from breaking into multiple lines */
+    white-space: nowrap; /* Prevent breaking into multiple lines */
+    overflow: auto; /* Add auto overflow to handle too much content */
 }
 
+/* Adjust dropdown for visibility within the viewport */
 .dropdown-content.show {
     display: block; /* Show the dropdown */
 }
@@ -110,18 +121,26 @@ header#main-header::after {
     left: auto;
 }
 
+.nav-link.active {
+    background-color: red;
+    color: white;
+}
+
+
+/* Dropdown link styling - Remove underline */
+/* Ensure no scrolling is required by aligning properly */
 .dropdown-content a {
-    color: white; /* White text color for dropdown links */
+    color: white;
     padding: 12px 16px;
+    text-decoration: none; /* Remove underline */
     display: block;
     text-align: left;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: red; /* Red background on dropdown link hover */
+    background-color: red;
 }
-
 /* Dropdown hover effect */
 .dropdown:hover .dropdown-content {
     display: block; /* Show dropdown on hover */
