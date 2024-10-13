@@ -15,12 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle dropdown on button click for small screens
     const dropdownButtons = document.querySelectorAll('.dropbtn');
-    
+
     dropdownButtons.forEach(button => {
         button.addEventListener('click', function(event) {
             event.stopPropagation(); // Prevent the event from bubbling up
             const dropdownContent = this.nextElementSibling; // Get the corresponding dropdown content
-            dropdownContent.classList.toggle('show'); // Toggle dropdown visibility
+            
+            // Toggle dropdown visibility
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show'); // If already shown, hide it
+            } else {
+                // Hide all other dropdowns first
+                dropdownButtons.forEach(btn => {
+                    const content = btn.nextElementSibling;
+                    if (content.classList.contains('show')) {
+                        content.classList.remove('show'); // Close other dropdowns
+                    }
+                });
+                dropdownContent.classList.add('show'); // Show the clicked dropdown
+            }
         });
     });
 
@@ -35,15 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add scale animation on hover for nav links
+// Add click event for nav links
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('mouseover', () => {
-        link.style.transform = "scale(1.1)";
-        link.style.transition = "transform 0.3s ease";
-    });
- 
-    link.addEventListener('mouseout', () => {
-        link.style.transform = "scale(1)";
+    link.addEventListener('click', () => {
+        // Remove the 'active' class from all links
+        document.querySelectorAll('.nav-link').forEach(nav => {
+            nav.classList.remove('active'); // Remove active class from all links
+        });
+        
+        // Add the 'active' class to the clicked link
+        link.classList.add('active'); // Add active class to the clicked link
     });
 });
 
@@ -79,7 +93,3 @@ document.querySelectorAll('.dropdown').forEach(dropdown => {
         dropdownContent.classList.remove('show'); // Hide the dropdown
     });
 });
-
-
-
-
