@@ -24,7 +24,7 @@
 }
 
 /* Make the event block responsive */
-@media (max-width: 768px) {
+@media (max-width: 660px) {
   .event {
     width: 90%; /* Take up more width on smaller screens */
   }
