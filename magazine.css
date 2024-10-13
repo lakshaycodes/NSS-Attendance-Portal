@@ -1,7 +1,7 @@
-body {
+section{
+  padding: 10px;
   background-color: #e0f7fa; /* Light cyan background */
 }
-
 .card-container {
   display: flex;
   flex-wrap: wrap;

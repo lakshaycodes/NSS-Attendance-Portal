@@ -1,6 +1,6 @@
 body {
   font-family: "Arial", sans-serif;
-  background-color: #e0f7fa;
+  
   color: #333;
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@ body {
 .por-section {
   text-align: center;
   padding: 20px;
+  background-color: #e0f7fa;
 }
 
 h1 {

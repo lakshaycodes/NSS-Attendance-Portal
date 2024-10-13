@@ -1,27 +1,26 @@
-function showDetails(cardId) {
-    // Dim the background
-    document.body.classList.add("dimmed");
+function showDetails(alumniId) {
+  // Get the alumni details element
+  const detailsElement = document.getElementById(alumniId + '-details');
   
-    // Show the details for the clicked card
-    const detailsElement = document.getElementById(cardId + "-details");
-    if (detailsElement) {
-      detailsElement.style.display = "flex"; // Use flex or block depending on your layout
-    }
-  }
-  
-  // To close the details when clicking outside
-  document.addEventListener("click", function (event) {
-    // Ensure that we are checking against the correct class and not child elements
-    const isDetails = event.target.classList.contains("alumni-details") || 
-                     event.target.closest('.alumni-details');
-  
-    // Only remove dim and hide details if the click is outside the details
-    if (!isDetails) {
-      const openDetails = document.querySelector(".alumni-details[style*='display: flex']");
-      if (openDetails) {
-        document.body.classList.remove("dimmed");
-        openDetails.style.display = "none";
+  // Show the details
+  detailsElement.style.display = 'flex'; // Make it visible
+  document.body.classList.add('dimmed'); // Dim the background
+
+  // Optional: To close the details when clicking outside
+  detailsElement.addEventListener('click', function(event) {
+      if (event.target === detailsElement) {
+          closeDetails();
       }
-    }
+  });
+}
+
+function closeDetails() {
+  // Hide all alumni details
+  const details = document.querySelectorAll('.alumni-details');
+  details.forEach(detail => {
+      detail.style.display = 'none';
   });
   
+  // Remove the dimmed background
+  document.body.classList.remove('dimmed');
+}
