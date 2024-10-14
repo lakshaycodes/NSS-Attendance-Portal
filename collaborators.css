@@ -10,19 +10,16 @@ body {
   background-color: #e0f7fa;
 }
 h1 {
-  text-align: left; /* Align title to the left */
+  text-align: left; 
   margin: 20px 0;
   font-size: 2.5em;
-  color: #19366b; /* Color for the title */
-  /* padding-left: 15px; */
+  color: #19366b; 
 }
 
 .collaborators-description {
-  text-align: left; /* Align paragraph to the left */
-  font-size: 1.2em;
+  text-align: left; 
   color: #555;
   margin-bottom: 40px;
-  /* padding-left: 15px; */
 }
 .collaborators {
   text-align: center;
@@ -32,44 +29,43 @@ h1 {
 .collaborators h2 {
   color: #003366;
   font-size: 200%;
-  margin-bottom: 30px; /* Add margin for spacing */
+  margin-bottom: 30px; 
 }
 
 .collaborator-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 50px 20px; /* Space between columns */
-  max-width: 1200px; /* Limit max width */
-  margin: 0 auto; /* Center the grid */
+  gap: 50px 20px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .collaborator {
-  display: flex; /* Use flexbox to center logos */
+  display: flex; 
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Center the link in the grid cell */
+  margin: 0 auto; 
 }
 
 .collaborator img {
-  max-width: 60%; /* Make logos responsive */
+  max-width: 60%; 
   height: auto;
   transition: transform 0.3s;
 }
 
 .collaborator:hover img {
-  transform: scale(1.15); /* Zoom effect on hover */
+  transform: scale(1.15); 
 }
 
-/* Responsive adjustments */
 @media (max-width: 1200px) {
   .collaborator-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 800px) {
   .collaborator-grid {
-    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    grid-template-columns: repeat(3, 1fr); 
   }
   h1{
     font-size: 1.8rem;
@@ -82,11 +78,11 @@ h1 {
 
 @media (max-width: 500px) {
   .collaborator-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .collaborator img {
-    max-width: 80%; /* Increase logo size on smaller screens */
+    max-width: 80%; 
   }
   h1{
     font-size: 1.5rem;

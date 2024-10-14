@@ -1,5 +1,5 @@
 body {
-    background-color: #e0f7fa; /* Light cyan background */
+    background-color: #e0f7fa; 
   }
   
   h1 {
@@ -26,7 +26,6 @@ body {
     padding: 20px;
   }
   
-  /* Basic styling for the alumni card */
   .alumni-card {
     position: relative;
     width: 200px;
@@ -42,7 +41,6 @@ body {
     z-index: -1;
   }
   
-  /* Image styling */
   .alumni-card img {
     width: 100%;
     height: 70%;
@@ -56,18 +54,15 @@ body {
     color: #333;
   }
   
-  /* Hover effect: enlarge slightly */
   .alumni-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
   
-  /* Dimming background when card is active */
   body.dimmed {
     background-color: rgba(224, 247, 250, 0.5);
   }
   
-  /* Styles for alumni details */
   .alumni-details {
     display: none;
     position: fixed;
@@ -81,13 +76,10 @@ body {
     align-items: center;
   }
   
-  /* Content of the expanded card */
   .details-content {
     background-color: #19366b;
     border-radius: 8px;
     padding: 30px;
-    /* width: 90%; */
-    /* max-width: 1000px; */
     height: auto;
   
   }
@@ -120,65 +112,61 @@ body {
     color: red;
   }
   
-  /* Media Queries for responsiveness */
   @media (max-width: 768px) {
     .alumni-card {
-      width: 150px; /* Smaller card size on medium screens */
-      height: 250px; /* Adjust height */
+      width: 150px; 
+      height: 250px; 
     }
   
     .big-image {
-      width: 150px; /* Adjust image size */
+      width: 150px; 
     }
   
     .details-text {
-      font-size: 1em; /* Reduce font size for smaller screens */
+      font-size: 1em; 
     }
   
     h1 {
-      font-size: 2em; /* Reduce title size */
+      font-size: 2em; 
     }
   
     .alumni-description {
-      font-size: 1em; /* Reduce description size */
+      font-size: 1em; 
     }
   }
   
   @media (max-width: 480px) {
     .alumni-card {
-      width: 100%; /* Full width on small screens */
-      height: auto; /* Adjust height */
+      width: 100%; 
+      height: auto; 
     }
   
     .details-content {
-      flex-direction: column; /* Stack image and text vertically */
-      align-items: center; /* Center content */
+      flex-direction: column; 
+      align-items: center; 
     }
   
     .big-image {
-      width: 100%; /* Full width image */
-      margin-right: 0; /* Remove margin */
+      width: 100%; 
+      margin-right: 0; 
     }
   
     .details-text {
-      max-width: 90%; /* Adjust text width */
+      max-width: 90%; 
     }
   }
   
-  
-  /* New keyframes for a combined slide-in, fade-in, and scale animation */
   @keyframes slideInFadeScale {
     0% {
       opacity: 0;
-      transform: translateY(-30px) scale(0.8); /* Start above and smaller */
+      transform: translateY(-30px) scale(0.8); 
     }
     100% {
       opacity: 1;
-      transform: translateY(0) scale(1); /* End in the correct position and size */
+      transform: translateY(0) scale(1); 
     }
   }
   
-  /* Alumni details with animation */
   .alumni-details {
     display: none;
     position: fixed;
@@ -190,17 +178,15 @@ body {
     z-index: 10;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 0.3s ease-out forwards; /* Keeps the fade-in effect for the background */
+    animation: fadeIn 0.3s ease-out forwards; 
   }
   
-  /* Content of the expanded card with the new slide, fade, and scale animation */
   .details-content {
     background-color: #19366b;
     border-radius: 8px;
     padding: 30px;
     opacity: 0;
-    transform: translateY(-30px) scale(0.8); /* Initial state: slightly smaller and offset */
-    animation: slideInFadeScale 0.6s ease-out forwards; /* Apply the new combined animation */
+    transform: translateY(-30px) scale(0.8);
+    animation: slideInFadeScale 0.6s ease-out forwards; 
   }
-  
-  /* kjnjnk */
+ 

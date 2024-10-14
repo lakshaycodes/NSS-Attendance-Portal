@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh; /* Adjust height as per your layout */
-  background-color: #e0f7fa; /* Light cyan background */
+  height: 60vh; 
+  background-color: #e0f7fa; 
 }
 
 .coming-soon-text {

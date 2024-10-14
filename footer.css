@@ -1,4 +1,3 @@
-/* Footer styles */
 .footer {
   background-color: #19366b;
   color: white;
@@ -7,7 +6,6 @@
   border-bottom: 10px solid #19366b;
 }
 
-/* Social media section in red */
 .social-media {
   display: flex;
   justify-content: space-between;
@@ -40,7 +38,6 @@
   transform: scale(1.15);
 }
 
-/* Links section */
 .links {
   display: flex;
   justify-content: space-around;
@@ -76,14 +73,10 @@
   margin: 0 20px;
 }
 
-/* Copyright section */
 .copyright {
   margin-top: 20px;
 }
 
-/* Responsive Design */
-
-/* For tablets */
 @media (max-width: 1024px) {
   .links {
     flex-direction: column;
@@ -100,7 +93,6 @@
   }
 }
 
-/* For mobile */
 @media (max-width: 768px) {
   .social-media {
     flex-direction: column;
@@ -125,7 +117,6 @@
   }
 }
 
-/* For small mobile devices */
 @media (max-width: 480px) {
   .social-icon {
     width: 25px;

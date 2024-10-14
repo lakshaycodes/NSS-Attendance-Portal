@@ -1,12 +1,12 @@
 .events-section {
   padding: 10px;
-  background-color: #e0f7fa; /* Light cyan background */
+  background-color: #e0f7fa;
 }
 
 .main {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap */
-  justify-content: center; /* Center items */
+  flex-wrap: wrap;
+  justify-content: center; 
   padding: 0px;
 }
 
@@ -15,24 +15,23 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  background-color: white; /* Background for each event block */
-  border: 1px solid #19366b; /* Border color matching NSS */
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* To prevent overflow of images */
-  width: 300px; /* Fixed width of each event block */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+  background-color: white; 
+  border: 1px solid #19366b; 
+  border-radius: 8px; 
+  overflow: hidden;
+  width: 300px; 
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
-/* Make the event block responsive */
 @media (max-width: 660px) {
   .event {
-    width: 90%; /* Take up more width on smaller screens */
+    width: 90%; 
   }
 }
 
 .event:hover {
-  transform: scale(1.05); /* Slightly scale the block on hover */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: scale(1.05); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
 }
 
 /* Slider container */
@@ -40,22 +39,21 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-bottom: 2px solid #19366b; /* Border below the image matching NSS */
+  border-bottom: 2px solid #19366b; 
 }
 
 /* Image slider */
 .slider {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth transition between images */
+  transition: transform 0.5s ease-in-out; 
 }
 
 .event-image {
   width: 100%;
-  height: auto; /* Ensure height adjusts to maintain aspect ratio */
-  object-fit: cover; /* Ensure image covers the area */
+  height: auto; 
+  object-fit: cover; 
 }
 
-/* Arrows */
 .prev-arrow,
 .next-arrow {
   position: absolute;
@@ -71,7 +69,6 @@
   user-select: none;
 }
 
-/* Positioning the arrows */
 .prev-arrow {
   left: 5px;
 }
@@ -80,30 +77,29 @@
   right: 5px;
 }
 
-/* Show arrows on hover */
 .slider-container:hover .prev-arrow,
 .slider-container:hover .next-arrow {
   display: block;
 }
 
 .event-title {
-  margin: 10px 0; /* Add some space above and below the title */
-  font-size: 1.2em; /* Increase font size */
-  color: #19366b; /* Match title color with NSS color */
-  text-align: center; /* Center align the title */
-  font-weight: bold; /* Make the title bold */
+  margin: 10px 0; 
+  font-size: 1.2em; 
+  color: #19366b;
+  text-align: center; 
+  font-weight: bold; 
 }
 
 h1 {
-  text-align: left; /* Align title to the left */
+  text-align: left; 
   margin: 20px 0;
   font-size: 2.5em;
-  color: #19366b; /* Color for the title */
+  color: #19366b; 
   padding-left: 15px;
 }
 
 .events-section p {
-  text-align: left; /* Align paragraph to the left */
+  text-align: left; 
   font-size: 1.2em;
   color: #555;
   margin-bottom: 40px;
@@ -114,7 +110,6 @@ footer p {
   color: white;
 }
 
-/* Additional responsive styles */
 @media(max-width:1025px){
   footer p{
     text-align: center;
@@ -122,14 +117,12 @@ footer p {
 }
 @media (max-width: 480px) {
   h1 {
-    font-size: 2em; /* Smaller title on very small screens */
+    font-size: 2em; 
   }
-
   p {
-    font-size: 1em; /* Smaller paragraph text */
+    font-size: 1em; 
   }
-
   .event-title {
-    font-size: 1.1em; /* Smaller event title */
+    font-size: 1.1em; 
   }
 }
