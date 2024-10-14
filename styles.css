@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,12 @@
   font-family: "Arial", sans-serif;
 }
 
-/* Body Styles */
 body {
   background-color: #f0f0f0;
   color: #333;
-  padding: 0; /* Overall spacing */
+  padding: 0; 
 }
 
-/* Banner Section */
 .banner {
   position: relative;
   height: 400px;
@@ -25,12 +23,11 @@ body {
 }
 
 .banner-image {
-  width: 100%; /* Full width for responsiveness */
-  height: 100%; /* Ensure it fills the banner section */
-  object-fit: cover; /* Ensures image covers the area without distortion */
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Banner Text */
 .banner-text {
   position: absolute;
   text-align: center;
@@ -39,31 +36,27 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-
-/* Notice Bar Section */
 .notice-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #003366; /* Dark blue background */
+  background-color: #003366; 
   padding: 5px;
   color: white;
   font-size: 1.2em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Current Notice Text */
 .current-notice {
-  flex: 1; /* Take available space on the left */
-  padding-right: 10px; /* Space between the current notice and the scroll */
+  flex: 1; 
+  padding-right: 10px; 
 }
 
-/* Notice Container */
 .notice-container {
   overflow: hidden;
-  width: 82%; /* Adjusted width for scrolling notices */
+  width: 82%;
   position: relative;
-  white-space: nowrap; /* Prevent line breaks */
+  white-space: nowrap; 
 }
 
 .notice-scroll {
@@ -74,29 +67,25 @@ body {
 
 .notice-scroll p {
   display: inline-block;
-  margin-right: 50px; /* Space between notices */
+  margin-right: 50px;
 }
 
-/* Notice Scroll Links */
 .notice-scroll a {
-  color: white; /* Change link color to white */
-  text-decoration: none; /* Remove default underline */
-  transition: text-decoration 0.3s; /* Smooth transition for the underline */
+  color: white; 
+  text-decoration: none; 
+  transition: text-decoration 0.3s; 
 }
 
-/* Underline on Hover */
 .notice-scroll a:hover {
-  text-decoration: underline; /* Underline the text on hover */
+  text-decoration: underline; 
 }
 
-/* Additional Styles for the Notice Scroll */
 .notice-scroll p {
-  display: inline-block; /* Keep paragraphs inline for formatting */
-  margin-right: 50px; /* Space between notices */
-  font-size: 0.9em; /* Slightly increase font size for better visibility */
+  display: inline-block; 
+  margin-right: 50px; 
+  font-size: 0.9em; 
 }
 
-/* Animation for Scrolling Effect */
 @keyframes scroll-left {
   from {
     transform: translateX(100%);
@@ -106,7 +95,6 @@ body {
   }
 }
 
-/* View All Button */
 .view-all-btn {
   background-color: #d32f2f;
   color: white;
@@ -123,19 +111,19 @@ body {
 .banner-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the banner area */
-  position: absolute; /* Layer text over the image */
+  object-fit: cover; 
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 1; /* Image behind the text */
+  z-index: 1;
 }
 
 .banner-text {
-  position: relative; /* Text layered above the image */
-  z-index: 2; /* Text above the image */
+  position: relative; 
+  z-index: 2;
   color: white;
   text-align: center;
-  padding-top: 150px; /* Space from the top */
+  padding-top: 150px; 
 }
 
 .banner-text h1 {
@@ -147,7 +135,6 @@ body {
   font-size: 1.5em;
 }
 
-/* Welcome Message Section */
 .welcome-message {
   background-color: #f0f0f0;
   color: #333;
@@ -171,48 +158,45 @@ body {
   line-height: 1.6;
 }
 
-/* Message Cards Section */
 .message-cards {
   padding: 10px;
   background-color: #e0f7fa;
 }
 
-/* Individual Card Styling */
 .card {
-  width: 100%; /* Full width of the container */
+  width: 100%;
   background-color: #fff;
   border: 2px solid #003366;
   border-radius: 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px; /* Space between cards */
-  display: flex; /* Flexbox for layout */
-  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; 
+  display: flex; 
+  align-items: center; 
 }
 
 .card-content {
-  display: flex; /* Flex layout for content */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  align-items: center;
   padding: 20px;
 }
 
-/* Image Styling */
 .card-img {
-  width: 150px; /* Size of the circular image */
-  height: 150px; /* Size of the circular image */
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image covers the area */
-  margin-right: 20px; /* Space between image and text */
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 20px; 
 }
 
 .message-text {
-  flex: 1; /* Take remaining space */
+  flex: 1;
 }
 
 .card h3 {
   font-size: 1.8em;
-  color: #d32f2f; /* Red for important titles */
+  color: #d32f2f; 
 }
 
 .card p {
@@ -220,19 +204,16 @@ body {
   margin: 10px 0;
 }
 
-/* Collapsible Section */
 .collapsible-section {
-  max-height: 420px; /* Adjusted height to show VC and PC full messages */
+  max-height: 420px;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
 
-/* Expanded State */
 .collapsible-section.expanded {
-  max-height: 2000px; /* Large enough to show all the messages */
+  max-height: 2000px;
 }
 
-/* Read More Button */
 .read-more-btn {
   display: block;
   margin: 20px auto;
@@ -251,13 +232,13 @@ body {
 
 .recent-events-section {
   padding: 20px;
-  background-color: #e0f7fa; /* Light cyan background */
+  background-color: #e0f7fa; 
 }
 
 .recent-events-header {
   display: flex;
-  justify-content: space-between; /* Space between title and button */
-  align-items: center; /* Center vertically */
+  justify-content: space-between; 
+  align-items: center; 
   margin: 20px 0;
 }
 
@@ -265,7 +246,7 @@ body {
   text-align: left;
   margin: 20px 0;
   font-size: 2.5em;
-  color: #19366b; /* NSS color */
+  color: #19366b; 
   padding-left: 15px;
 }
 
@@ -281,11 +262,11 @@ body {
   align-items: center;
   margin: 10px;
   background-color: white;
-  border: 1px solid #19366b; /* NSS color */
+  border: 1px solid #19366b; 
   border-radius: 8px;
   overflow: hidden;
   width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .recent-event:hover {
@@ -293,15 +274,13 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Slider container */
 .recent-slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-bottom: 2px solid #19366b; /* NSS color */
+  border-bottom: 2px solid #19366b; 
 }
 
-/* Image slider */
 .recent-slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -313,7 +292,6 @@ body {
   object-fit: cover;
 }
 
-/* Arrows */
 .recent-prev-arrow,
 .recent-next-arrow {
   position: absolute;
@@ -329,7 +307,6 @@ body {
   user-select: none;
 }
 
-/* Positioning the arrows */
 .recent-prev-arrow {
   left: 5px;
 }
@@ -338,11 +315,10 @@ body {
   right: 5px;
 }
 
-/* Button to view all events */
 .view-all-events-button {
-  margin-left: 20px; /* Add some space between title and button */
+  margin-left: 20px;
   padding: 10px 20px;
-  background-color: #19366b; /* NSS color */
+  background-color: #19366b;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -350,10 +326,9 @@ body {
 }
 
 .view-all-events-button:hover {
-  background-color: #1565c0; /* Darker shade on hover */
+  background-color: #1565c0; 
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -363,7 +338,6 @@ body {
   }
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -373,7 +347,6 @@ body {
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1038px){
   .view-all-btn{
     width: 115px;
@@ -387,7 +360,7 @@ body {
 
 @media (max-width: 768px) {
   .banner {
-    height: 300px; /* Adjust banner height for tablet screens */
+    height: 300px; 
   }
   .view-all-btn{
     width: 130px;
@@ -397,18 +370,18 @@ body {
   }
 
   .message-cards {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px; 
   }
 
   
   .card-content {
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .card-img {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 15px; /* Add space below the image */
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 @media(max-width: 680px){
@@ -444,14 +417,14 @@ body {
     height: 120px;
   }
 }
-/* Optimize for screens with max-width 420px */
+
 @media (max-width: 420px) {
   .banner {
-    height: 138px; /* Reduce banner height for mobile phones */
+    height: 138px;
   }
   
   .message-cards {
-    padding: 10px; /* Further reduce padding on smaller screens */
+    padding: 10px;
   }
   .welcome-message{
     font-size: xx-small;
