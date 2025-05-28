@@ -1,0 +1,61 @@
+main{
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.admin-title {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Card container */
+.admin-card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual cards */
+.admin-card {
+  display: block;
+  background-color: white;
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-card:hover {
+    background-color: #19366b;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.admin-card:hover .admin-card-text{
+    color: white;
+}
+.admin-card:hover .admin-card-title{
+    color: white;
+}
+/* Card title and text */
+.admin-card-title {
+  margin-bottom: 10px;
+  color: #19366b;
+}
+.admin-card-text {
+  color: #666;
+}
