@@ -5,23 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT CELL</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="comingsoon.css" />
     <link rel="stylesheet" href="navigation.css" />
-
+    <link rel="stylesheet" href="attendence.css">
     <link rel="icon" href="images/header-images/nss-logo.png" type="image/x-icon" />
   </head>
   <body>
     <div id="header"></div>
-
     <div id="navigation"></div>
 
     <main>
-      <div class="coming-soon-container">
-        <h1 class="coming-soon-text">COMING SOON</h1>
-      </div>
-    </main>
-    <div id="footer"></div>
+      <div class="login-body">
+  <div class="login-container" id="login-container">
+    <div class="login-form-container login-sign-up-container">
+      <form action="#">
+        <h1>Admin Login</h1>
+        <br><br><br>
+        <input type="text" placeholder="AdminId" />
+        <input type="password" placeholder="Password" />
+        <a href="#" style="align-self: flex-end;">Forgot your password?</a>
+        <br>
+        <button>Login</button>
+      </form>
+    </div>
 
+    <div class="login-form-container login-sign-in-container">
+      <form action="#">
+        <h1>User Login</h1>
+        <br><br><br>
+        <input type="text" placeholder="UserId" />
+        <input type="password" placeholder="Password" />
+        <a href="#" style="align-self: flex-end;">Forgot your password?</a>
+        <br>
+        <button>Login</button>
+      </form>
+    </div>
+
+    <div class="login-overlay-container">
+      <div class="login-overlay">
+        <div class="login-overlay-panel login-overlay-left">
+          <h1>Welcome Back, Admin!</h1>
+          <p>Access volunteer records, manage event attendance, and generate detailed reports with ease.</p>
+          <h2 style="margin-bottom: 0;">Are you a volunteer?</h2>
+          <p>Click below to go to Volunteer Login</p>
+          <button class="ghost" id="signIn">User Login</button>
+        </div>
+        <div class="login-overlay-panel login-overlay-right">
+          <h1>Welcome NSS Volunteer!</h1>
+          <p>Keep track of your attendance, view your participation record, and stay updated with upcoming NSS events.</p>
+          <h2 style="margin-bottom: 0;">Are you an admin?</h2>
+          <p>Click below to go to Admin Login</p>
+          <button class="ghost" id="signUp">Admin Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+    <div id="footer"></div>
+    <script src="attendance.js"></script>
     <script src="header-footer.js"></script>
     <script src="navigation.js"></script> 
     
