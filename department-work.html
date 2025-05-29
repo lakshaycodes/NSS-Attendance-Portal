@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSS NSUT CELL</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="department-work.css">
+
+    <link rel="icon" href="images/header-images/nss-logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div id="navigation"></div>
+
+    <main>
+      
+        <div class="dept-container">
+    
+    <!-- Go Back Button -->
+    <div class="dept-header">
+      <a href="admin.html" class="dept-back-btn">← Back to Admin Panel</a>
+    </div>
+
+    <h1 class="dept-title">Mark Department Work</h1>
+
+    <form class="dept-form" onsubmit="return deptHandleSubmit(event)">
+      <div class="dept-form-group">
+        <label for="roll" class="dept-label">Roll Number</label>
+        <input type="text" id="roll" name="roll" class="dept-input" required>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="department" class="dept-label">Department</label>
+        <select id="department" name="department" class="dept-input" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="Tech">Tech</option>
+            <option value="Design">Design</option>
+            <option value="SM">Social Media</option>
+            <option value="Design">Content</option>
+            <option value="Design">Public Relations</option>
+            <option value="Design">Logistics</option>
+            <option value="Design">Miscellaneous Work</option>
+        </select>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="date" class="dept-label">Date</label>
+        <input type="date" id="date" name="date" class="dept-input" required>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="work" class="dept-label">Work Description</label>
+        <textarea id="work" name="work" class="dept-input" rows="3" required></textarea>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="hours" class="dept-label">Working Hours</label>
+        <input type="number" id="hours" name="hours" class="dept-input" required>
+      </div>
+
+      <button type="submit" class="dept-submit-btn">Submit</button>
+    </form>
+  </div>
+
+    </main>
+    <div id="footer"></div>
+
+    <script src="header-footer.js"></script>
+    <script src="navigation.js"></script> 
+    <SCript src="department-work.js"></SCript>
+    <script src="load-navi-bar.js"></script> 
+  </body>
+</html>
