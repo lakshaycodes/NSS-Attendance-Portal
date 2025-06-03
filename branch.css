@@ -21,7 +21,7 @@ main {
 
 .branch-title {
   font-size: 28px;
-  color: #333;
+  color: #003366;
   margin-bottom: 30px;
 }
 
@@ -35,7 +35,7 @@ main {
 
 .branch-card {
   background-color: white;
-  color: #007BFF;
+  color: #003366;
   text-decoration: none;
   padding: 40px 20px;
   border-radius: 10px;
@@ -51,4 +51,6 @@ main {
 .branch-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: #003366;
+  color: white;
 }
