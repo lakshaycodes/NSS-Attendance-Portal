@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.village-section {
+  padding: 10px;
+  background-color: #e0f7fa; 
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding: 0px;
+}
+
+.village {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  background-color: white; 
+  border: 2px solid #19366b; 
+  border-radius: 8px; 
+  width: calc(28% - 20px); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+@media(max-width:1025px){
+  footer p{
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .village {
+    width: calc(45% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .village {
+    width: calc(100% - 20px); 
+  }
+}
+
+.village:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.village-image {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+  border-bottom: 2px solid #19366b;
+  border-radius: 7px;
+}
+
+.village-title {
+  margin: 10px 0; 
+  font-size: 1.2em;
+  color: #19366b; 
+  text-align: center; 
+  font-weight: bold; 
+}
+
+h1 {
+  text-align: left; 
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #19366b; 
+  padding-left: 15px;
+}
+
+.village-section p {
+  text-align: left; 
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
+
+footer p {
+  color: white;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; 
+  }
+  p {
+    font-size: 1em; 
+  }
+  .village-title {
+    font-size: 1.1em; 
+  }
+}

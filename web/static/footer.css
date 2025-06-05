@@ -1,0 +1,150 @@
+.footer {
+  background-color: #19366b;
+  color: white;
+  /* padding: 20px; */
+  text-align: center;
+  border-bottom: 10px solid #19366b;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  padding: 10px;
+}
+
+.social-media-text {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  width: 30px;
+  margin: 0 8px;
+}
+
+.social-icons img {
+  width: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.link-column {
+  flex: 1;
+  margin: 0 1rem;
+  text-align: left;
+}
+
+.link-column h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.link-column p,
+.link-column a {
+  color: white;
+  margin: 0.5rem 0;
+  text-decoration: none;
+}
+
+.link-column a:hover {
+  text-decoration: underline;
+}
+
+.vertical-line {
+  border-left: 2px solid white;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-column {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-media-text {
+    margin-bottom: 10px;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .link-column {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .social-icon {
+    width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 25px;
+  }
+  .social-media-text
+  {
+    font-size: medium;
+  }
+  .links {
+    flex-direction: column;
+  }
+
+  .link-column {
+    margin-bottom: 15px;
+  }
+}
+@media(max-width: 407px){
+  .social-media-text
+  {
+    font-size: 0.95em;
+  }
+  .social-icon {
+    width: 15px;
+  }
+}
+@media(max-width: 337px){
+  .social-media-text
+  {
+    font-size: x-small;
+  }
+}

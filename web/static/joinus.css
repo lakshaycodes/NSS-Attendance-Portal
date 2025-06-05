@@ -1,0 +1,101 @@
+body {
+  background-color: #e0f7fa; 
+}
+.join-us-section {
+  background-color: #f4f4f4;
+  text-align: center;
+  background-color: #e0f7fa; 
+
+  border-bottom: 35px solid #e0f7fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #19366b;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.por-description {
+  text-align: left; 
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
+
+.recruitment-process {
+  text-align: left;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recruitment-process h3 {
+  font-size: 1.8rem;
+  color: #19366b;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.recruitment-process p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.join-us-section p {
+  margin: 0;
+  padding: 15px;
+}
+
+.join-us-section h2 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: left; 
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #19366b; 
+  padding-left: 15px;
+}
+
+p {
+  text-align: left; 
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
+
+footer p {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .recruitment-process h3 {
+    font-size: 1.5rem;
+  }
+
+  .recruitment-process p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,144 @@
+body {
+  font-family: "Arial", sans-serif;
+  
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.por-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0f7fa;
+}
+
+h1 {
+  text-align: left; 
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #19366b;
+  padding-left: 15px;
+}
+
+.por-description {
+  text-align: left;
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+  padding-left: 15px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  perspective: 1000px; 
+  margin: 15px;
+  width: calc(33.333% - 30px); 
+  height: 300px; 
+  box-sizing: border-box;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; 
+  transform-style: preserve-3d; 
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 7px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; 
+}
+
+.card-front {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; 
+}
+
+.card-back {
+  background-color: white;
+  color: black; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  padding: 20px; 
+  border-radius: 7px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.card-front h2 {
+  font-weight: 800;
+}
+.card-back h3 {
+  color: black; 
+}
+.card-back p {
+  color: black;
+}
+.card-back a:hover {
+  color: #19366b;
+}
+.card:hover .card-front {
+  background-color: #19366b; 
+  color: white;
+}
+.card:hover .card-front h3 {
+  color: white;
+}
+.card:hover .card-front img {
+  border: 2px solid white;
+}
+.card img {
+  border-radius: 50%;
+  height: 190px;
+  width: 190px;
+  margin: 8px 0;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 0; 
+}
+
+.card-front h3 {
+  color: #19366b;
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+.card-back h3 {
+  color: #19366b;
+}
+.card a {
+  color: black; 
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(90% - 30px); 
+  }
+}
