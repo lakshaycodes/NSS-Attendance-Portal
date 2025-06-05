@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT CELL</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="nssalumni.css" />
-    <link rel="stylesheet" href="navigation.css" /> 
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'nssalumni.css' %}" />
+    <link rel="stylesheet" href="{% static 'navigation.css' %}" /> 
 
-    <link rel="icon" href="images/header-images/nss-logo.png" type="image/x-icon" />
+    <link rel="icon" href="{% static 'images/header-images/nss-logo.png' %}" type="image/x-icon" />
     
   </head>
   <body>
@@ -27,7 +28,7 @@
       </p>
       <section id="alumni-section">
         <div class="alumni-card" id="alumni1" onclick="showDetails('alumni1')">
-          <img src="images/index-images/anuj-sir.jpg" alt="Alumni 1" />
+          <img src="{% static 'images/index-images/anuj-sir.jpg' %}" alt="Alumni 1" />
           <h3>Mr. Anuj</h3>
           <p>Founding President</p>
         </div>
@@ -60,7 +61,7 @@
         </div>
 
         <div class="alumni-card" id="alumni2" onclick="showDetails('alumni2')">
-          <img src="images/alumni-images/Pritika.jpg" alt="Alumni 2" />
+          <img src="{% static 'images/alumni-images/Pritika.jpg' %}" alt="Alumni 2" />
           <h3>Ms. Pritika</h3>
           <p>Former President</p>
         </div>
@@ -99,7 +100,7 @@
         
 
         <div class="alumni-card" id="alumni2" onclick="showDetails('alumni3')">
-          <img src="images/alumni-images/Harsh Dahiya.JPG" alt="Alumni 3" />
+            <img src="{% static 'images/alumni-images/Harsh Dahiya.JPG' %}" alt="Alumni 3" />
           <h3>Mr. Harsh Dahiya</h3>
           <p>Former Administrative Coordinator</p>
         </div>
@@ -135,10 +136,10 @@
         </div>
 
         <div class="alumni-card" id="alumni7" onclick="showDetails('alumni7')">
-          <img
-            src="images/alumni-images/ARSHDEEP SINGH DEOGUN.jpg"
+            <img
+            src="{% static 'images/alumni-images/ARSHDEEP SINGH DEOGUN.jpg' %}"
             alt="Alumni 7"
-          />
+            />
           <h3>Mr. Arshdeep Singh</h3>
           <p>Former Allied Work Head</p>
         </div>
@@ -172,7 +173,7 @@
 
         <div class="alumni-card" id="alumni9" onclick="showDetails('alumni9')">
           <img
-            src="images/alumni-images/Chhaviyush Kusumakar.JPG"
+            src="{% static 'images/alumni-images/Chhaviyush Kusumakar.JPG' %}"
             alt="Alumni 9"
           />
           <h3>Mr. Chhaviyush Kusumakar</h3>
@@ -217,7 +218,7 @@
         id="alumni10"
         onclick="showDetails('alumni10')"
       >
-        <img src="images/alumni-images/Gurkirat singh.jpg" alt="Alumni 10" />
+        <img src="{% static 'images/alumni-images/Gurkirat singh.jpg' %}" alt="Alumni 10" />
         <h3>Mr. Gurkirat Singh</h3>
         <p>Former Report Head</p>
       </div>
@@ -255,7 +256,7 @@
       </div>
 
       <div class="alumni-card" id="alumni8" onclick="showDetails('alumni8')">
-        <img src="images/alumni-images/Ayush Kotwar.jpg" alt="Alumni 8" />
+        <img src="{% static 'images/alumni-images/Ayush Kotwar.jpg' %}" alt="Alumni 8" />
         <h3>Mr. Ayush Kotwar</h3>
         <p>Former Report Head</p>
       </div>
@@ -297,7 +298,7 @@
           onclick="showDetails('alumni13')"
         >
           <img
-            src="images/alumni-images/Sushrut M Dhakate.JPG"
+            src="{% static 'images/alumni-images/Sushrut M Dhakate.JPG' %}"
             alt="Alumni 13"
           />
           <h3>Mr. Sushrut Dhakate</h3>
@@ -334,7 +335,7 @@
 
         <div class="alumni-card" id="alumni4" onclick="showDetails('alumni4')">
           <img
-            src="images/alumni-images/Hemant Kr Rohilla.jpg"
+            src="{% static 'images/alumni-images/Hemant Kr Rohilla.jpg' %}"
             alt="Alumni 4"
           />
           <h3>Mr. Hemant Kr Rohilla</h3>
@@ -372,7 +373,7 @@
 
         
         <div class="alumni-card" id="alumni6" onclick="showDetails('alumni6')">
-          <img src="images/alumni-images/Aditya Bisht.jpg" alt="Alumni 6" />
+            <img src="{% static 'images/alumni-images/Aditya Bisht.jpg' %}" alt="Alumni 6" />
           <h3>Mr. Aditya Bisht</h3>
           <p>Former Design Head</p>
         </div>
@@ -418,7 +419,7 @@
         
 
         <div class="alumni-card" id="alumni5" onclick="showDetails('alumni5')">
-          <img src="images/alumni-images/CHIRAG JAIN.jpg" alt="Alumni 5" />
+          <img src="{% static 'images/alumni-images/CHIRAG JAIN.jpg' %}" alt="Alumni 5" />
           <h3>Mr. Chirag Jain</h3>
           <p>Former Senior Executive</p>
         </div>
@@ -426,28 +427,28 @@
           <div class="details-content">
             <div class="details-text">
               <p>
-                Saying goodbye isn't easy, especially reflecting on the two
-                amazing years we've shared. Since joining NSS in January 2022,
-                I,ve experienced a rollercoaster of learning, fun, and
-                friendship. Initially shy, I found my place during the National
-                Integration Camp in May 2022, gaining confidence and lifelong
-                friendships. I am deeply grateful to each member of this
-                incredible family for your support and inspiration. As we embark
-                on new adventures, let's carry forward the spirit of
-                NSS—service, unity, and compassion. To my juniors: "मंजिल मिले न
-                मिले ये तो मुकद्दर की बात है, हम कोशिश भी न करे ये तो गलत बात
-                है."
+          Saying goodbye isn't easy, especially reflecting on the two
+          amazing years we've shared. Since joining NSS in January 2022,
+          I,ve experienced a rollercoaster of learning, fun, and
+          friendship. Initially shy, I found my place during the National
+          Integration Camp in May 2022, gaining confidence and lifelong
+          friendships. I am deeply grateful to each member of this
+          incredible family for your support and inspiration. As we embark
+          on new adventures, let's carry forward the spirit of
+          NSS—service, unity, and compassion. To my juniors: "मंजिल मिले न
+          मिले ये तो मुकद्दर की बात है, हम कोशिश भी न करे ये तो गलत बात
+          है."
               </p>
               <br />
               <p>Working at : TCS</p>
               <br>
               <p>
-                Connect with them :
-                <a
-                  href="https://www.linkedin.com/in/chirag-jain-617035213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  target="_blank"
-                  >LinkedIn</a
-                >
+          Connect with them :
+          <a
+            href="https://www.linkedin.com/in/chirag-jain-617035213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            >LinkedIn</a
+          >
               </p>
             </div>
           </div>
@@ -458,7 +459,7 @@
           id="alumni14"
           onclick="showDetails('alumni14')"
         >
-          <img src="images/alumni-images/Vanshika.jpg" alt="Alumni 14" />
+          <img src="{% static 'images/alumni-images/Vanshika.jpg' %}" alt="Alumni 14" />
           <h3>Ms. Vanshika</h3>
           <p>Former Senior Executive</p>
         </div>
@@ -466,29 +467,29 @@
           <div class="details-content">
             <div class="details-text">
               <p>
-                Dear NSS team Members, As I prepare to move on from college, I
-                wanted to take a moment to say goodbye and thank you all. Being
-                part of this society has been an incredible experience, filled
-                with learning, growth, and wonderful memories. I am grateful for
-                the friendships and the teamwork we've shared. Each one of you
-                has contributed to making my time here special and
-                unforgettable. I wish NSS NSUT CELL continued success and hope
-                it reaches even greater heights by serving to society. Thank you
-                for everything!Best wishes, VANSHIKA TANWAR
+          Dear NSS team Members, As I prepare to move on from college, I
+          wanted to take a moment to say goodbye and thank you all. Being
+          part of this society has been an incredible experience, filled
+          with learning, growth, and wonderful memories. I am grateful for
+          the friendships and the teamwork we've shared. Each one of you
+          has contributed to making my time here special and
+          unforgettable. I wish NSS NSUT CELL continued success and hope
+          it reaches even greater heights by serving to society. Thank you
+          for everything!Best wishes, VANSHIKA TANWAR
               </p>
               <br />
               <!-- <p>
-                Connect with them :
-                <a href="https://www.linkedin.com/in/your-link" target="_blank"
-                  >LinkedIn</a
-                >
+          Connect with them :
+          <a href="https://www.linkedin.com/in/your-link" target="_blank"
+            >LinkedIn</a
+          >
               </p> -->
             </div>
           </div>
         </div>
 
         <div class="alumni-card" id="alumni11" onclick="showDetails('alumni11')">
-          <img src="images/alumni-images/katyani-maam.jpg" alt="Alumni 11" />
+          <img src="{% static 'images/alumni-images/katyani-maam.jpg' %}" alt="Alumni 11" />
           <h3>Ms. Katyayani</h3>
           <p>Former Senior Executive</p>
         </div>
@@ -496,24 +497,24 @@
           <div class="details-content">
             <div class="details-text">
               <p>
-                Reflecting on my journey with NSS brings a flood of memories,
-                from exhilarating highs to challenging lows. When I first
-                joined, I was both excited and apprehensive, not realizing NSS
-                would become my second home. We've faced tight deadlines,
-                chilling nights in Nanakheri, and setbacks, but we persevered
-                together. Late-night brainstorming sessions fueled by coffee,
-                laughter, and the thrill of seeing our hard work pay off are
-                moments I'll treasure forever. The friendships made, the
-                unforgettable trips to Dalhousie and Amritsar, and attending the
-                National Youth Festival 2024 in Nashik are highlights. Thank
-                you, NSS, for being part of this incredible journey!
+          Reflecting on my journey with NSS brings a flood of memories,
+          from exhilarating highs to challenging lows. When I first
+          joined, I was both excited and apprehensive, not realizing NSS
+          would become my second home. We've faced tight deadlines,
+          chilling nights in Nanakheri, and setbacks, but we persevered
+          together. Late-night brainstorming sessions fueled by coffee,
+          laughter, and the thrill of seeing our hard work pay off are
+          moments I'll treasure forever. The friendships made, the
+          unforgettable trips to Dalhousie and Amritsar, and attending the
+          National Youth Festival 2024 in Nashik are highlights. Thank
+          you, NSS, for being part of this incredible journey!
               </p>
               <br />
               <p>Working at : Logic Fruit Technologies</p>
               <br>
               <p>
-                Connect with them :
-                <a
+          Connect with them :
+          <a
                   href="https://www.linkedin.com/in/katyayani-gupta-4592ab219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   >LinkedIn</a
@@ -528,7 +529,7 @@
           id="alumni12"
           onclick="showDetails('alumni12')"
         >
-          <img src="images/alumni-images/Shreya Gupta.jpg" alt="Alumni 12" />
+            <img src="{% static 'images/alumni-images/Shreya Gupta.jpg' %}" alt="Alumni 12" />
           <h3>Ms. Shreya Gupta</h3>
           <p>Former Senior Executive</p>
         </div>
@@ -563,10 +564,10 @@
     </main>
     <div id="footer"></div>
 
-    <script src="nssalumni.js"></script>
-    <script src="header-footer.js"></script>
-    <script src="navigation.js"></script>
-    
-    <script src="load-navi-bar.js"></script>
+      <script src="{% static 'nssalumni.js' %}"></script>
+      <script src="{% static 'header-footer.js' %}"></script>
+      <script src="{% static 'navigation.js' %}"></script>
+      
+      <script src="{% static 'load-navi-bar.js' %}"></script>
   </body>
 </html>

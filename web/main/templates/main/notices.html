@@ -1,16 +1,17 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT CELL</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="notices.css" />
-    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'notices.css' %}" />
+    <link rel="stylesheet" href="{% static 'navigation.css' %}" />
 
     <link
       rel="icon"
-      href="images/header-images/nss-logo.png"
+      href="{% static 'images/header-images/nss-logo.png' %}"
       type="image/x-icon"
     />
   </head>
@@ -159,9 +160,9 @@
 
     <div id="footer"></div>
 
-    <script src="header-footer.js"></script>
-    <script src="navigation.js"></script>
+    <script src="{% static 'header-footer.js' %}"></script>
+    <script src="{% static 'navigation.js' %}"></script>
 
-    <script src="load-navi-bar.js"></script>
+    <script src="{% static 'load-navi-bar.js' %}"></script>
   </body>
 </html>

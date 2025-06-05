@@ -1,7 +1,7 @@
 
 function loadNavigation() {
     const navDiv = document.getElementById('navigation');
-    fetch('static/navigation.html')
+    fetch('/static/navigation.html')
         .then(response => response.text())
         .then(data => {
             navDiv.innerHTML = data;

@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSS NSUT CELL</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="adopted.css">
-    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'adopted.css' %}">
+    <link rel="stylesheet" href="{% static 'navigation.css' %}" />
 
-    <link rel="icon" href="images/header-images/nss-logo.png" type="image/x-icon" />
+    <link rel="icon" href="{% static 'images/header-images/nss-logo.png' %}" type="image/x-icon" />
 </head> 
 <body>
     <div id="header"></div>
@@ -23,27 +24,27 @@
             
             <div class="main">
                 <div class="village">
-                    <img src="images/villages-image/rewla-khanpur.PNG" alt="Village 1" class="village-image">
+                    <img src="{% static 'images/villages-image/rewla-khanpur.PNG' %}" alt="Village 1" class="village-image">
                     
                 </div>
 
                  <div class="village">
-                    <img src="images/villages-image/nanakheri.PNG" alt="Village 2" class="village-image">
+                    <img src="{% static 'images/villages-image/nanakheri.PNG' %}" alt="Village 2" class="village-image">
                     
                 </div>
 
                  <div class="village">
-                    <img src="images/villages-image/badusarai.PNG" alt="Village 3" class="village-image">
+                    <img src="{% static 'images/villages-image/badusarai.PNG' %}" alt="Village 3" class="village-image">
                    
                 </div>
 
                  <div class="village">
-                    <img src="images/villages-image/pochanpur.jpg" alt="Village 5" class="village-image">
+                    <img src="{% static 'images/villages-image/pochanpur.jpg' %}" alt="Village 5" class="village-image">
                   
                 </div>
 
                  <div class="village">
-                    <img src="images/villages-image/jaffarpur.PNG" alt="Village 4" class="village-image">
+                    <img src="{% static 'images/villages-image/jaffarpur.PNG' %}" alt="Village 4" class="village-image">
                    
                 </div>
                 
@@ -52,10 +53,10 @@
     
     <div id="footer"></div> 
     
-    <script src="header-footer.js"></script> 
-    <script src="navigation.js"></script>
+    <script src="{% static 'header-footer.js' %}"></script> 
+    <script src="{% static 'navigation.js' %}"></script>
     
-    <script src="load-navi-bar.js"></script> 
+    <script src="{% static 'load-navi-bar.js' %}"></script> 
 
 </body>
 </html>
