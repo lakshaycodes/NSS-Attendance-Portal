@@ -1,15 +1,16 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS NSUT CELL</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="navigation.css" />
-    <link rel="stylesheet" href="attendence.css" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'navigation.css' %}" />
+    <link rel="stylesheet" href="{% static 'attendence.css' %}" />
     <link
       rel="icon"
-      href="images/header-images/nss-logo.png"
+      href="{% static 'images/header-images/nss-logo.png' %}"
       type="image/x-icon"
     />
   </head>
@@ -21,7 +22,7 @@
       <div class="login-body">
         <div class="login-container" id="login-container">
           <div class="login-form-container login-sign-up-container">
-            <form action="http://127.0.0.1:8000/api/admin-login/" method="POST">
+            <form action="/login/" method="POST">
               <h1>Admin Login</h1>
               <br /><br /><br />
               <input type="text" placeholder="AdminId" name="username"/>
@@ -35,11 +36,12 @@
           </div>
 
           <div class="login-form-container login-sign-in-container">
-            <form action="#">
+            <form action="/login/" method="POST">
+              {% csrf_token %}
               <h1>User Login</h1>
               <br /><br /><br />
-              <input type="text" placeholder="UserId" />
-              <input type="password" placeholder="Password" />
+              <input type="text" placeholder="Username" name = "username" />
+              <input type="password" placeholder="Password" name = "password" />
               <a href="#" style="align-self: flex-end">Forgot your password?</a>
               <br />
               <button>Login</button>
@@ -141,10 +143,9 @@
         });
     </script>
     <div id="footer"></div>
-    <script src="attendance.js"></script>
-    <script src="header-footer.js"></script>
-    <script src="navigation.js"></script>
-
-    <script src="load-navi-bar.js"></script>
+    <script src="{% static 'attendance.js' %}"></script>
+    <script src="{% static 'header-footer.js' %}"></script>
+    <script src="{% static 'navigation.js' %}"></script>
+    <script src="{% static 'load-navi-bar.js' %}"></script>
   </body>
 </html>
