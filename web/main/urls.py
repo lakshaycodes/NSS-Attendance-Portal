@@ -13,5 +13,11 @@ urlpatterns = [
     path('nssalumni/', views.nssalumni, name='nssalumni'),
     path('collaborators/', views.collaborators, name='collaborators'),
     path('undp/', views.undp, name='undp'),
-    path('admin/', views.admin, name='attendance'),
+    path('admin/', views.admin, name='admin'),
+    path('attendance/', views.attendance, name='attendance'),
+    path('logout/', views.logout_view, name='logout'),
+    path('create-event/', views.create_event, name='create_event'),
+    path('mark-attendance/<int:event_id>/', views.mark_attendance, name='mark_attendance'),
+    path('view-events/', views.view_events, name='view_events'),
+    path('dept-work/', views.assign_department_work, name='assign_work'),
 ]

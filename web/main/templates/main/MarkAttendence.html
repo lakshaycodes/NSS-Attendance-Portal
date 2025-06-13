@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Attendance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'main/markAttendence.css' %}" />
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-6">
+    <div class="container mx-auto">
+      <button
+        id="backBtn"
+        class="mb-6 text-gray-600 hover:text-gray-900 flex items-center" onclick="window.location.href='/view-events/'"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-4 h-4 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        Back to Events
+      </button>
+
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Mark Attendance</h1>
+        <p id="eventDetails" class="text-gray-600">Event: {{event.name}}</p>
+      </div>
+
+      <!-- Branch Filter -->
+      <div class="bg-white rounded-lg shadow p-4 mb-6">
+        <div class="flex items-center gap-2 mb-4 font-semibold">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-gray-700"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 20h5v-2a3 3 0 00-3-3h-4M9 20H4v-2a3 3 0 013-3h4m0-4h6m-6 0a3 3 0 01-3-3V5a3 3 0 016 0v3a3 3 0 01-3 3z"
+            />
+          </svg>
+          Select Branch
+        </div>
+        <div id="branchButtons" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <!-- Student List -->
+      <div class="bg-white rounded-lg shadow p-4 mb-6">
+        <h2 id="studentListTitle" class="text-xl font-semibold mb-4">
+          Students
+        </h2>
+        <form method="POST" id="attendanceForm">
+          {% csrf_token %}
+          <div class="bg-white rounded-lg shadow p-4 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Students</h2>
+            <div class="space-y-4">
+              {% for x in volunteers %}
+              <div class="flex justify-between items-center p-4 bg-white rounded-lg border">
+                <div>
+                  <p class="font-medium text-gray-900">{{ x.first_name }}</p>
+                  <p class="text-sm text-gray-600">ID: {{ x.roll_number }} | {{ x.branch }}</p>
+                </div>
+                <label class="flex items-center gap-2 text-sm font-medium">
+                  <input type="checkbox" name="present_volunteers" value="{{ x.id }}" {% if x.id in present_volunteer_ids %}checked{% endif %}>
+                  Present
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        
+          <div class="flex justify-end">
+            <button type="submit"
+              class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg"
+            >
+              Save Attendance
+            </button>
+          </div>
+        </form>
+    </div>
+
+    {% comment %} <script src="{% static 'main/markAttendence.js' %}"></script> {% endcomment %}
+  </body>
+</html>

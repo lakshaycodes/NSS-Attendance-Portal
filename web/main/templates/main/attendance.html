@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Attendance</title>
+</head>
+<body>
+    <h1>Volunteer Attendance</h1>
+
+    <!-- Table for Events Attended -->
+    <h2>Events Attended</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Location</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for attendance in events_attended %}
+            <tr>
+                <td> {{ attendance.event.name }}</td>
+                <td>{{ attendance.event.location }}</td>
+                <td>{{ attendance.event.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Table for Department Work -->
+    <h2>Department Work</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Task</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for work in department_work %}
+            <tr>
+                <td>{{ work.dept }}</td>
+                <td>{{ work.task }}</td>
+                <td>{{ work.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Attendance</title>
+    <link rel="stylesheet" href="{% static 'ManageAttendence.css' %}" />
+  </head>
+  <body>
+    <div class="page-container">
+      <button class="back-button" onclick="navigateTo('/admin/')">
+        ← Back to Dashboard
+      </button>
+
+      <div class="header">
+        <h1>Manage Attendance</h1>
+        <p>Select an event to mark student attendance</p>
+      </div>
+
+      <div id="eventsContainer">
+      <dic class="card-grid">
+        {% for event in events %}
+        <div class="card">
+        <div class="card-title">{{event.name}}</div>
+      <div class="card-content">
+        <p><strong>Location:</strong> {{event.location}}</p>
+        <p><strong>Date:</strong> {{event.date}}</p>
+        <p><strong>Working Hours:</strong> {{event.hours}} hrs</p>
+        <button class="card-button" href="/mark-attendance/{{event.id}}/" onclick="navigateTo('/mark-attendance/{{event.id}}/')">
+          Mark Attendance
+        </button>
+      </div>
+    </div>
+      {% endfor %}
+  </div>
+      </div>
+    </div>
+
+<script>
+  function navigateTo(path) {
+    window.location.href = path;
+  }
+</script>
+  </body>
+</html>

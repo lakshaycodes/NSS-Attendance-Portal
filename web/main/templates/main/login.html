@@ -22,7 +22,8 @@
       <div class="login-body">
         <div class="login-container" id="login-container">
           <div class="login-form-container login-sign-up-container">
-            <form action="/login/" method="POST">
+            <form action="/admin/" method="POST">
+              {% csrf_token %}
               <h1>Admin Login</h1>
               <br /><br /><br />
               <input type="text" placeholder="AdminId" name="username"/>

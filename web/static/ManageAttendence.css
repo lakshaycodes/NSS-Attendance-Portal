@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #eff6ff, #c7d2fe);
+  padding: 24px;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  margin-bottom: 24px;
+  background: none;
+  border: none;
+  color: #4b5563;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #1f2937;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #6b7280;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.card-content {
+  color: #4b5563;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.card-content p {
+  margin: 4px 0;
+}
+
+.card-button {
+  margin-top: 16px;
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-button:hover {
+  background-color: #1d4ed8;
+}
+
+.empty-card {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+}
+
+.empty-card h3 {
+  font-size: 20px;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.empty-card p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.empty-card button {
+  background-color: #16a34a;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.empty-card button:hover {
+  background-color: #15803d;
+}
