@@ -1,0 +1,28 @@
+/* .coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+  background-color: #e0f7fa; 
+}
+
+.coming-soon-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: move-text 3s ease-in-out infinite;
+}
+
+@keyframes move-text {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */

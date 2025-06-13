@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSS NSUT CELL</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'navigation.css' %}" />
+    <link rel="stylesheet" href="{% static 'department-work.css' %}" />
+
+    <link rel="icon" href="{% static 'images/header-images/nss-logo.png' %}" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div id="navigation"></div>
+
+    <main>
+      
+        <div class="dept-container">
+    
+    <!-- Go Back Button -->
+    <div class="dept-header">
+      <a href="/admin" class="dept-back-btn">← Back to Admin Panel</a>
+    </div>
+
+    <h1 class="dept-title">Mark Department Work</h1>
+
+    <form class="dept-form" method="post" action="/dept-work/">
+      {% csrf_token %}
+      <div class="dept-form-group">
+        <label for="roll" class="dept-label">Roll Number</label>
+        <input type="text" id="roll" name="roll_number" class="dept-input" required>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="department" class="dept-label">Department</label>
+        <select id="department" name="dept" class="dept-input" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="Tech">Tech</option>
+            <option value="Design">Design</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Content">Content</option>
+            <option value="Public Relations">Public Relations</option>
+            <option value="Logistics">Logistics</option>
+            <option value="Miscellaneous">Miscellaneous Work</option>
+        </select>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="date" class="dept-label">Date</label>
+        <input type="date" id="date" name="date" class="dept-input" required>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="work" class="dept-label">Work Description</label>
+        <textarea id="work" name="task" class="dept-input" rows="3" required></textarea>
+      </div>
+
+      <div class="dept-form-group">
+        <label for="hours" class="dept-label">Working Hours</label>
+        <input type="number" id="hours" name="hours" class="dept-input" required>
+      </div>
+
+      <button type="submit" class="dept-submit-btn">Submit</button>
+    </form>
+  </div>
+
+    </main>
+    <div id="footer"></div>
+
+    <script src="{% static 'header-footer.js' %}"></script>
+    <script src="{% static 'navigation.js' %}"></script> 
+    <script src="{% static 'load-navi-bar.js' %}"></script> 
+  </body>
+</html>
